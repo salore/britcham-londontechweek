@@ -172,7 +172,7 @@
                 <div class="absolute inset-0 bg-primary/80 backdrop-brightness-75"></div>
             </div>
             <div
-                class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center w-full pt-16 pb-12 lg:pt-28 md:pb-0">
+                class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center w-full pt-24 pb-12 lg:pt-28 md:pb-0">
                 <img id="hero-logo" src="logos/logos empresas/britwhite.png" alt="BritCham Logo"
                     class="h-[83px] md:h-[250px] lg:h-[188px] mx-auto mb-4 md:mb-6 opacity-90" />
                 <div id="hero-mision"
@@ -244,17 +244,13 @@
                                 Nuestra red institucional
                             </div>
                             <div
-                                class="flex flex-wrap items-center justify-center md:justify-start gap-8 md:gap-12 lg:gap-20 pl-0 md:pl-6 pt-2 md:pt-4">
+                                class="flex flex-nowrap items-center justify-center gap-3 md:gap-12 lg:gap-20 pl-0 md:pl-6 pt-2 md:pt-4">
                                 <img src="logos/logos empresas/FCDO_CL_SCL_1S (3) ENG(2).png"
-                                    alt="British Embassy Santiago"
-                                    class="h-12 md:h-24 object-contain mix-blend-multiply">
+                                    alt="British Embassy Santiago" class="h-14 md:h-24 object-contain mix-blend-multiply">
                                 <img src="logos/logos empresas/DBT LOGO Transparent.png"
-                                    alt="Department for Business & Trade"
-                                    class="h-10 md:h-20 object-contain mix-blend-multiply">
-                                <img src="logos/logos empresas/britrish chamber.png" alt="British Chambers of Commerce"
-                                    class="h-10 md:h-20 object-contain mix-blend-multiply">
-                                <img src="logos/logos empresas/Britlac-transparentBG_.png" alt="Britlac"
-                                    class="h-8 md:h-14 object-contain mix-blend-multiply">
+                                    alt="Department for Business & Trade" class="h-12 md:h-20 object-contain mix-blend-multiply">
+                                <img src="logos/logos empresas/britrish chamber.png" alt="British Chambers of Commerce" class="h-12 md:h-20 object-contain mix-blend-multiply">
+                                <img src="logos/logos empresas/Britlac-transparentBG_.png" alt="Britlac" class="h-10 md:h-14 object-contain mix-blend-multiply">
                             </div>
                         </li>
                         <li class="flex items-center gap-3 md:gap-4 font-bold max-w-2xl">
@@ -366,12 +362,12 @@
             <div class="absolute inset-0 diagonal-pattern-navy opacity-40"></div>
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
                 <div class="flex justify-center mb-12 md:mb-24">
-                    <img src="titulos/porqueukm.png" alt="¿Por qué Reino Unido?"
+                    <img id="why-uk-title" src="titulos/porqueukm.png" alt="¿Por qué Reino Unido?"
                         class="w-full max-w-[500px] lg:max-w-[800px] h-auto scroll-trigger">
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <div
-                        class="bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
+                        class="why-uk-card bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
                         <svg class="mb-6 md:mb-8 text-lightblue w-12 h-12 md:w-16 md:h-16"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -385,7 +381,7 @@
                             globales (EE. UU., Europa y Medio Oriente)</p>
                     </div>
                     <div
-                        class="bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
+                        class="why-uk-card bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
                         <svg class="mb-6 md:mb-8 text-lightblue w-12 h-12 md:w-16 md:h-16"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -402,7 +398,7 @@
                             corporates, startups, universidades e inversionistas</p>
                     </div>
                     <div
-                        class="bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
+                        class="why-uk-card bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
                         <svg class="mb-6 md:mb-8 text-lightblue w-12 h-12 md:w-16 md:h-16"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -1028,6 +1024,63 @@
             .to('#hero-year-container', { opacity: 0, y: -80, duration: 1 }, 0.2)
             .to('#hero-desc-container', { opacity: 0, y: -60, duration: 1 }, 0.3)
             .to('#hero-btn', { opacity: 0, scale: 0.7, y: -40, duration: 0.8 }, 0.4);
+        // Why UK Section Animation
+        const whyUkTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#por-que-uk',
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Title Animation
+        whyUkTimeline.fromTo('#why-uk-title', 
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // Cards Animation
+        gsap.utils.toArray('.why-uk-card').forEach((card, index) => {
+            const cardTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+
+            // Entrance + Border Color Change
+            cardTimeline.fromTo(card,
+                { opacity: 0, y: 50, scale: 0.95 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    scale: 1, 
+                    duration: 0.7, 
+                    delay: index * 0.15,
+                    ease: 'back.out(1.7)',
+                    borderLeftColor: '#00A4EF' 
+                }
+            );
+
+            // Icon Animation (SVG)
+            const icon = card.querySelector('svg');
+            if (icon) {
+                cardTimeline.fromTo(icon,
+                    { opacity: 0, scale: 0 },
+                    { opacity: 1, scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' },
+                    '-=0.4'
+                );
+            }
+
+            // Text Animations
+            const texts = card.querySelectorAll('h3, p');
+            cardTimeline.fromTo(texts,
+                { opacity: 0 },
+                { opacity: 1, duration: 0.6, stagger: 0.1 },
+                '-=0.3'
+            );
+        });
             gsap.utils.toArray('.agenda-card').forEach((card) => {
                 gsap.fromTo(card,
                     {
