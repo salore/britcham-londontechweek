@@ -70,18 +70,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
-    <style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
-    </style>
+
 </head>
 
 <body>
     <header class="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b-4 border-primary">
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between relative">
             <div class="flex items-center z-50">
-                <img alt="Britcham Logo" class="h-12 md:h-[70px] w-auto object-contain"
+                <img alt="Britcham Logo" class="h-[62px] md:h-[91px] w-auto object-contain"
                     src="logos/logos empresas/britblack.png" />
             </div>
 
@@ -102,9 +98,11 @@
             </nav>
 
             <!-- Desktop Button -->
-            <a href="#sumate"
-                class="hidden lg:inline-flex bg-primary text-white px-8 py-2 text-[10px] font-black uppercase tracking-widest sharp-btn hover:bg-lightblue hover:text-white transition-all">
-                Postula ahora
+            <a id="desktop-header-cta"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
+                target="_blank"
+                class="hidden lg:inline-flex bg-primary text-white text-[10px] font-black uppercase tracking-tighter sharp-btn shadow-[4px_4px_0px_0px_rgba(15,37,72,0.3)] px-5 py-2.5 hover:bg-lightblue hover:-translate-y-2 hover:translate-x-2 transition-all duration-200">
+                Inscríbete
             </a>
 
             <!-- Mobile Hamburger Button -->
@@ -129,8 +127,9 @@
                     href="#inversion" onclick="closeMobileMenu()">Invierte en ti</a>
                 <a class="text-primary text-base font-black uppercase tracking-widest hover:text-lightblue transition-colors border-b border-gray-100 pb-4"
                     href="#faq" onclick="closeMobileMenu()">FAQ</a>
-                <a class="bg-primary text-white text-center px-8 py-4 mt-2 text-sm font-black uppercase tracking-widest sharp-btn hover:bg-lightblue hover:text-white transition-all"
-                    href="#sumate" onclick="closeMobileMenu()">Inscríbete</a>
+                <a class="bg-primary text-white text-center px-8 py-4 mt-2 text-sm font-black uppercase tracking-widest sharp-btn hover:bg-lightblue hover:text-white hover:-translate-y-2 hover:translate-x-2 transition-all duration-200 active:scale-95"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
+                    target="_blank" onclick="closeMobileMenu()">Inscríbete</a>
             </nav>
         </div>
 
@@ -163,14 +162,15 @@
         </script>
     </header>
     <main>
-        <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <section class="relative min-h-screen w-full flex items-center justify-center overflow-x-hidden">
             <div class="absolute inset-0 z-0 bg-primary">
                 <img alt="London Tech Scene" class="w-full h-full object-cover opacity-85" src="image(5).png" />
                 <div class="absolute inset-0 bg-primary/80 backdrop-brightness-75"></div>
             </div>
-            <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center w-full pt-32 md:pt-12">
+            <div
+                class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center w-full pt-32 pb-12 lg:pt-48 md:pb-0">
                 <img src="logos/logos empresas/britwhite.png" alt="BritCham Logo"
-                    class="h-24 md:h-48 mx-auto mb-6 md:mb-10 opacity-90" />
+                    class="h-[83px] md:h-[250px] lg:h-[188px] mx-auto mb-6 md:mb-10 opacity-90" />
                 <div
                     class="inline-block bg-lightblue text-white px-6 py-2 md:px-10 md:py-4 mb-8 border-2 border-primary">
                     <span
@@ -210,22 +210,21 @@
                         </div>
                     </div>
                 </div>
-                <button
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
+                    target="_blank"
                     class="mx-auto w-full md:w-auto bg-lightblue text-white px-8 py-6 md:px-16 md:py-8 sharp-btn font-[900] text-xl md:text-2xl uppercase tracking-tighter flex items-center justify-center gap-4 shadow-[8px_8px_0px_0px_rgba(15,37,72,0.5)] md:shadow-[12px_12px_0px_0px_rgba(15,37,72,0.5)] hover:translate-x-2 hover:-translate-y-2 transition-transform">
-                    Quiero participar
+                    Inscríbete
                     <span class="material-symbols-outlined font-black">arrow_forward</span>
-                </button>
+                </a>
             </div>
         </section>
         <section id="quienessomos"
             class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-32 bg-accent relative overflow-hidden">
             <div class="absolute inset-0 diagonal-pattern-navy opacity-10"></div>
             <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
-                <div class="lg:w-1/3 text-center lg:text-left">
-                    <h2
-                        class="brutalist-text text-5xl md:text-7xl lg:text-8xl leading-none md:leading-tight scroll-trigger">
-                        <span class="text-primary">¿Quiénes</span><br /><span class="text-lightblue">Somos?</span>
-                    </h2>
+                <div class="lg:w-1/3 text-center lg:text-left flex justify-center lg:justify-center">
+                    <img src="titulos/quienes-somos-m.png" alt="¿Quiénes Somos?"
+                        class="w-full max-w-[400px] lg:max-w-[540px] h-auto scroll-trigger">
                 </div>
                 <div class="lg:w-2/3 space-y-8 md:space-y-12 scroll-trigger text-left">
                     <p
@@ -353,10 +352,10 @@
             class="bg-accent slanted-divider-top slanted-divider-bottom py-20 md:py-40 relative overflow-hidden">
             <div class="absolute inset-0 diagonal-pattern-navy opacity-40"></div>
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-                <h2 class="brutalist-text text-6xl md:text-8xl mb-12 md:mb-24 leading-tight scroll-trigger">
-                    <span class="text-primary">¿Por qué</span><br /><span class="text-lightblue outline-text">Reino
-                        Unido?</span>
-                </h2>
+                <div class="flex justify-center mb-12 md:mb-24">
+                    <img src="titulos/porqueukm.png" alt="¿Por qué Reino Unido?"
+                        class="w-full max-w-[500px] lg:max-w-[800px] h-auto scroll-trigger">
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <div
                         class="bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
@@ -418,7 +417,7 @@
             <div class="flex flex-col lg:flex-row gap-8 lg:gap-32">
                 <div class="lg:w-1/3">
                     <div class="sticky top-32 scroll-trigger">
-                        <h2 class="brutalist-text text-7xl md:text-9xl text-primary mb-2 md:mb-4 italic">Agenda</h2>
+                        <h2 class="brutalist-text text-7xl md:text-9xl text-primary mb-2 md:mb-4">Agenda</h2>
                         <div class="h-4 md:h-6 w-32 md:w-48 bg-lightblue mb-6 md:mb-8"></div>
                         <span class="text-primary font-black uppercase tracking-widest text-sm md:text-base">5 Días
                             Intensivos ·
@@ -489,10 +488,10 @@
         </section>
         <section id="sumate" class="bg-primary py-16 md:py-32 text-white">
             <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-                <h2 class="brutalist-text text-6xl md:text-8xl mb-12 md:mb-20 scroll-trigger">
-                    <span class="text-white">Sé parte de la</span><br /><span class="italic text-lightblue">misión
-                        comercial</span>
-                </h2>
+                <div class="flex justify-center mb-12 md:mb-20">
+                    <img src="titulos/separtem.png" alt="Sé parte de la Misión Comercial"
+                        class="w-full max-w-[600px] lg:max-w-[900px] h-auto scroll-trigger">
+                </div>
 
                 <div
                     class="bg-white/10 backdrop-blur-sm p-8 md:p-12 lg:p-16 border-l-8 md:border-l-[16px] border-lightblue scroll-trigger flex flex-col md:flex-row gap-8 md:gap-16 items-center">
@@ -517,8 +516,7 @@
                     <div class="w-full md:w-1/3 flex justify-center mt-6 md:mt-0">
                         <div
                             class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-slate-800 border-4 md:border-8 border-white overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Networking meeting" class="w-full h-full object-cover">
+                            <img src="imagencirculo.png" alt="Networking meeting" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -528,11 +526,10 @@
             class="bg-accent slanted-divider-top slanted-divider-bottom pt-32 pb-24 md:py-40 relative overflow-hidden">
             <div class="absolute inset-0 diagonal-pattern-navy opacity-40"></div>
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-                <h2
-                    class="brutalist-text text-5xl md:text-7xl lg:text-8xl mb-12 md:mb-24 leading-tight scroll-trigger text-center">
-                    <span class="text-primary">Inversión de</span><br /><span class="text-lightblue outline-text">Misión
-                        Comercial</span>
-                </h2>
+                <div class="flex justify-center mb-12 md:mb-24">
+                    <img src="titulos/inversiondemisionm.png" alt="Inversión de Misión Comercial"
+                        class="w-full max-w-[700px] lg:max-w-[1000px] h-auto scroll-trigger">
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <!-- Box 1 -->
                     <div
@@ -621,10 +618,10 @@
         </section>
 
         <section id="faq" class="max-w-[1000px] mx-auto px-6 md:px-12 py-16 md:py-32 bg-white">
-            <h2
-                class="brutalist-text text-5xl md:text-8xl text-primary mb-12 md:mb-16 italic text-center scroll-trigger">
-                Preguntas <span class="text-lightblue">Frecuentes</span>
-            </h2>
+            <div class="flex justify-center mb-12 md:mb-16">
+                <img src="titulos/preguntas.png" alt="Preguntas Frecuentes"
+                    class="w-full max-w-[500px] lg:max-w-[700px] h-auto scroll-trigger">
+            </div>
 
             <div class="space-y-4 faq-container">
                 <!-- Q1 -->
@@ -842,49 +839,65 @@
         <section class="relative bg-primary py-24 md:py-48 overflow-hidden scroll-trigger">
             <!-- Background Image -->
             <div
-                class="absolute inset-0 bg-[url('logos/logos empresas/imagen3.png')] bg-cover bg-center opacity-60 mix-blend-luminosity">
+                class="absolute inset-0 bg-[url('imagen3.png')] bg-cover bg-center opacity-60 mix-blend-luminosity blur-sm">
             </div>
             <!-- Diagonal White Overlay -->
             <div class="absolute inset-0 diagonal-pattern-white opacity-30"></div>
 
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
+                <div class="mb-6 md:mb-10">
+                    <p class="text-white font-black text-xl md:text-3xl uppercase tracking-[0.3em] leading-none mb-2">
+                        Misión comercial
+                    </p>
+                    <p class="text-white font-black text-2xl md:text-4xl uppercase tracking-[0.5em] leading-none">
+                        2026
+                    </p>
+                </div>
+
+                <div class="flex justify-center mb-10 md:mb-16 drop-shadow-xl text-center">
+                    <img src="titulos/separtem.png" alt="Sé parte de la Misión Comercial"
+                        class="w-full max-w-[700px] lg:max-w-[1000px] h-auto scroll-trigger">
+                </div>
+
                 <p
-                    class="text-white font-black text-xl md:text-2xl lg:text-3xl uppercase tracking-[0.2em] md:tracking-[0.4em] mb-4 md:mb-6 drop-shadow-md pb-2">
-                    Misión comercial 2026
-                </p>
-                <h2
-                    class="brutalist-text text-5xl md:text-[5.5rem] lg:text-[8rem] mb-10 md:mb-14 flex flex-col gap-4 md:gap-8 drop-shadow-xl text-center">
-                    <span class="text-white">Sé parte de la</span>
-                    <span class="text-lightblue italic">delegación oficial</span>
-                </h2>
-                <p
-                    class="text-white font-black text-sm md:text-xl lg:text-2xl uppercase tracking-[0.1em] md:tracking-[0.3em] mb-12 md:mb-16 drop-shadow-lg">
+                    class="text-white font-black text-sm md:text-xl uppercase tracking-[0.2em] md:tracking-[0.4em] mb-12 md:mb-20 opacity-90">
                     Cierre de inscripciones: 30 de abril
                 </p>
-                <button
-                    class="mx-auto bg-white text-primary px-8 py-5 md:px-16 md:py-8 sharp-btn text-xl md:text-2xl lg:text-3xl font-[900] uppercase tracking-tighter shadow-[8px_8px_0px_0px_rgba(0,113,206,1)] md:shadow-[12px_12px_0px_0px_rgba(0,113,206,1)] flex items-center justify-center gap-4 md:gap-6 hover:bg-lightblue hover:text-white hover:-translate-y-2 hover:translate-x-2 transition-all">
-                    Quiero más información
-                    <span class="material-symbols-outlined text-3xl md:text-4xl font-black">arrow_forward</span>
-                </button>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
+                    target="_blank"
+                    class="mx-auto bg-white text-primary px-10 py-6 md:px-20 md:py-10 sharp-btn hover:bg-lightblue hover:text-white hover:-translate-y-2 hover:translate-x-2 transition-all group overflow-visible">
+                    <div class="flex items-center justify-center gap-6 md:gap-10">
+                        <span
+                            class="text-xl md:text-4xl font-[900] uppercase tracking-tighter leading-tight text-center">
+                            Inscríbete
+                        </span>
+                        <span
+                            class="material-symbols-outlined text-4xl md:text-6xl font-black transition-transform group-hover:translate-x-2">arrow_forward</span>
+                    </div>
+                </a>
             </div>
         </section>
-        <footer class="bg-white border-t-4 md:border-t-8 border-primary py-16 md:py-24">
+        <footer class="bg-white border-t-4 md:border-t-8 border-primary py-10 md:py-14">
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col items-center">
-                <div class="flex justify-center gap-8 md:gap-12 mb-12 md:mb-16">
-                    <a class="text-primary hover:text-gold transition-colors" href="#">
-                        <span class="material-symbols-outlined text-4xl md:text-5xl font-black">language</span>
-                    </a>
-                    <a class="text-primary hover:text-gold transition-colors" href="#">
-                        <span class="material-symbols-outlined text-4xl md:text-5xl font-black">share</span>
+                <div class="flex justify-center mb-8 md:mb-10">
+                    <a class="text-primary hover:text-lightblue transition-all transform hover:scale-110"
+                        href="https://www.instagram.com/britchamchile/?hl=es" target="_blank">
+                        <!-- Custom refined Instagram Icon (SVG) -->
+                        <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
                     </a>
                 </div>
                 <p
-                    class="text-primary text-xs md:text-sm font-[900] uppercase tracking-[0.3em] md:tracking-[0.5em] mb-6 md:mb-8 text-center">
+                    class="text-primary text-xs md:text-sm font-[900] uppercase tracking-[0.3em] md:tracking-[0.5em] mb-4 md:mb-6 text-center">
                     © 2026 BritCham Chile</p>
                 <div class="flex items-center justify-center gap-4 md:gap-6">
                     <span
                         class="text-[0.6rem] md:text-xs font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-primary">Santiago</span>
-                    <div class="w-2 h-2 md:w-3 md:h-3 bg-gold rotate-45"></div>
+                    <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#0071ce] rounded-full"></div>
                     <span
                         class="text-[0.6rem] md:text-xs font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-primary">London</span>
                 </div>
