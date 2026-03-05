@@ -74,26 +74,29 @@
 </head>
 
 <body>
-    <header class="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b-4 border-primary">
-        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between relative">
+    <header id="main-header"
+        class="fixed top-0 w-full z-[100] bg-white border-b-4 border-primary transition-all duration-300">
+        <div id="header-container"
+            class="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between relative transition-all duration-300">
             <div class="flex items-center z-50">
-                <img alt="Britcham Logo" class="h-[62px] md:h-[91px] w-auto object-contain"
+                <img id="header-logo" alt="Britcham Logo"
+                    class="h-[62px] md:h-[91px] w-auto object-contain transition-all duration-300"
                     src="logos/logos empresas/britblack.png" />
             </div>
 
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-12">
-                <a class="text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
+                <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#quienessomos">¿Quiénes Somos?</a>
-                <a class="text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
+                <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#por-que-uk">¿Por qué Reino Unido?</a>
-                <a class="text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
+                <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#agenda">Agenda</a>
-                <a class="text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
+                <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#sumate">Súmate</a>
-                <a class="text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
+                <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#inversion">Invierte en ti</a>
-                <a class="text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
+                <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#faq">FAQ</a>
             </nav>
 
@@ -927,6 +930,84 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
+        // Sticky Header Animation
+        const mainHeader = document.getElementById('main-header');
+        const headerContainer = document.getElementById('header-container');
+        const headerLogo = document.getElementById('header-logo');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuBtn = document.querySelector('#mobile-menu-btn span');
+        let isScrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50 && !isScrolled) {
+                isScrolled = true;
+                gsap.to(mainHeader, {
+                    backgroundColor: 'rgba(30, 40, 60, 0.9)',
+                    paddingBottom: '0px',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+                gsap.to(headerContainer, {
+                    paddingTop: '0.5rem',
+                    paddingBottom: '0.5rem',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+                gsap.to(headerLogo, {
+                    height: '70px',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+                gsap.to(navLinks, {
+                    color: '#ffffff',
+                    duration: 0.3
+                });
+                gsap.to(mobileMenuBtn, {
+                    color: '#ffffff',
+                    duration: 0.3
+                });
+                // Switch to white logo
+                headerLogo.src = 'logos/logos empresas/britwhite.png';
+                mainHeader.style.borderBottomColor = '#0071ce';
+            } else if (window.scrollY <= 50 && isScrolled) {
+                isScrolled = false;
+                gsap.to(mainHeader, {
+                    backgroundColor: '#ffffff',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+                gsap.to(headerContainer, {
+                    paddingTop: '1rem',
+                    paddingBottom: '1rem',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+                gsap.to(headerLogo, {
+                    height: window.innerWidth >= 768 ? '91px' : '62px',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+                gsap.to(navLinks, {
+                    color: '#080c41',
+                    duration: 0.3
+                });
+                gsap.to(mobileMenuBtn, {
+                    color: '#080c41',
+                    duration: 0.3
+                });
+                // Switch back to black logo
+                headerLogo.src = 'logos/logos empresas/britblack.png';
+                mainHeader.style.borderBottomColor = '#080c41';
+            }
+        });
+
+        // Handle window resize for logo height restoration
+        window.addEventListener('resize', () => {
+            if (!isScrolled) {
+                headerLogo.style.height = window.innerWidth >= 768 ? '91px' : '62px';
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             gsap.utils.toArray('.agenda-card').forEach((card) => {
