@@ -57,14 +57,7 @@
         .diagonal-pattern-white {
             background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255, 255, 255, 0.08) 15px, rgba(255, 255, 255, 0.08) 30px);
         }
-        .scroll-trigger {
-            view-timeline-name: --section;
-            view-timeline-axis: block;
-            animation-timeline: --section;
-            animation-name: fadeUp;
-            animation-range: entry 10% cover 30%;
-            animation-fill-mode: both;
-        }
+        
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
@@ -228,7 +221,7 @@
             <div class="absolute inset-0 diagonal-pattern-navy opacity-10"></div>
             <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
                 <div class="lg:w-1/3 text-center lg:text-left flex justify-center lg:justify-center">
-                    <img src="titulos/quienes-somos-m.png" alt="¿Quiénes Somos?"
+                    <img id="quienes-somos-title" src="titulos/quienes-somos-m.png" alt="¿Quiénes Somos?"
                         class="w-full max-w-[400px] lg:max-w-[540px] h-auto scroll-trigger">
                 </div>
                 <div class="lg:w-2/3 space-y-8 md:space-y-12 scroll-trigger text-left">
@@ -637,14 +630,14 @@
 
         <section id="faq" class="max-w-[1000px] mx-auto px-6 md:px-12 py-16 md:py-32 bg-white">
             <div class="flex justify-center mb-12 md:mb-16">
-                <img src="titulos/preguntas.png" alt="Preguntas Frecuentes"
+                <img id="faq-title" src="titulos/preguntas.png" alt="Preguntas Frecuentes"
                     class="w-full max-w-[500px] lg:max-w-[700px] h-auto scroll-trigger">
             </div>
 
             <div class="space-y-4 faq-container">
                 <!-- Q1 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Las sesiones y reuniones de la misión serán en inglés?</span>
@@ -664,7 +657,7 @@
 
                 <!-- Q2 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Debo pagar para inscribir a mi empresa en la misión Comercial London Tech Week organizada
@@ -686,7 +679,7 @@
 
                 <!-- Q3 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Qué perfil debe tener el delegado representante de mi empresa?</span>
@@ -706,7 +699,7 @@
 
                 <!-- Q4 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿El Fee incluye el costo de pasajes aéreos, transporte, comidas y hospedaje?</span>
@@ -726,7 +719,7 @@
 
                 <!-- Q5 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Puedo inscribir a mi empresa si no está relacionada al sector tecnológico? (Abogados,
@@ -747,7 +740,7 @@
 
                 <!-- Q6 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Puedo participar si mi empresa está inscrita en UK?</span>
@@ -767,7 +760,7 @@
 
                 <!-- Q7 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Los pases VIP incluyen acceso al AI Summit London?</span>
@@ -788,7 +781,7 @@
 
                 <!-- Q8 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Dónde puedo consultar la agenda de la feria?</span>
@@ -810,7 +803,7 @@
 
                 <!-- Q9 -->
                 <div
-                    class="group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
+                    class="faq-item group bg-[#0071ce]/10 border border-[#0071ce]/20 p-5 md:p-6 scroll-trigger hover:border-lightblue transition-all duration-300 overflow-hidden">
                     <button type="button" onclick="toggleFAQ(this)"
                         class="w-full flex justify-between items-center font-bold font-sans cursor-pointer text-primary text-base md:text-lg transition-colors duration-300 text-left">
                         <span>¿Necesito visa para visitar Londres/Reino Unido?</span>
@@ -1028,7 +1021,7 @@
             x: window.innerWidth < 768 ? -30 : -60,
             ease: 'none',
             scrollTrigger: {
-                trigger: '#se-parte',
+                trigger: '#sumate',
                 start: 'top center',
                 end: 'bottom center',
                 scrub: true,
@@ -1039,7 +1032,7 @@
         // Final Section - Entrance Animations
         const finalEntranceTimeline = gsap.timeline({
             scrollTrigger: {
-                trigger: '#se-parte',
+                trigger: '#sumate',
                 start: 'top 85%',
                 toggleActions: 'play none none reverse'
             }
@@ -1063,6 +1056,55 @@
                 { opacity: 1, scale: 1, duration: 0.7, delay: 0.8, ease: 'back.out(1.7)' }, 
                 0
             );
+                // Titles Entrance Animations
+        gsap.fromTo('#quienes-somos-title', 
+            { opacity: 0, y: 40 },
+            { 
+                opacity: 1, 
+                y: 0, 
+                duration: 0.8, 
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '#quienessomos', 
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse'
+                }
+            }
+        );
+
+                // FAQ Section Animation
+        const faqTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#faq',
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Title Animation
+        faqTimeline.fromTo('#faq-title', 
+            { autoAlpha: 0, y: 30 },
+            { 
+                autoAlpha: 1, 
+                y: 0, 
+                duration: window.innerWidth < 768 ? 0.5 : 0.8, 
+                ease: 'power3.out' 
+            }
+        );
+
+        // Questions Animation (Cascaded)
+        faqTimeline.fromTo('.faq-item', 
+            { autoAlpha: 0, x: -30 },
+            { 
+                autoAlpha: 1, 
+                x: 0, 
+                duration: window.innerWidth < 768 ? 0.4 : 0.6, 
+                stagger: 0.1, 
+                ease: 'power2.out' 
+            },
+            '+=0.2' // Starts 0.2s after title starts
+        );
+
         // Inversión Section Animation
         const inversionTimeline = gsap.timeline({
             scrollTrigger: {
