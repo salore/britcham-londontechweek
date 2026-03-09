@@ -1,0 +1,105 @@
+/* ============================================
+   BritCham Chile - London Tech Week 2026
+   Main Stylesheet
+   ============================================ */
+
+/* --- Brutalist Typography --- */
+.brutalist-text {
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    line-height: 0.85;
+}
+
+/* --- Sharp Button (Parallelogram) --- */
+.sharp-btn {
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+/* --- Slanted Dividers --- */
+.slanted-divider-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
+}
+.slanted-divider-top {
+    clip-path: polygon(0 6vw, 100% 0, 100% 100%, 0 100%);
+}
+.angled-block {
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+/* --- Diagonal Background Patterns --- */
+.diagonal-pattern-navy {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(15, 37, 72, 0.03) 15px,
+        rgba(15, 37, 72, 0.03) 30px
+    );
+}
+.diagonal-pattern-white {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(255, 255, 255, 0.08) 15px,
+        rgba(255, 255, 255, 0.08) 30px
+    );
+}
+
+/* --- Section Title Images --- */
+.section-title-img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+@media (min-width: 768px) {
+    .section-title-img {
+        max-width: 720px;
+    }
+}
+
+/* --- Hero Glow Effect --- */
+.hero-glow {
+    text-shadow:
+        0 0 15px rgba(0, 209, 255, 0.4),
+        0 0 30px rgba(0, 209, 255, 0.2),
+        0 0 45px rgba(0, 209, 255, 0.1);
+    animation: glow-pulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes glow-pulse {
+    from {
+        text-shadow:
+            0 0 10px rgba(0, 209, 255, 0.4),
+            0 0 20px rgba(0, 209, 255, 0.2);
+    }
+    to {
+        text-shadow:
+            0 0 20px rgba(0, 209, 255, 0.6),
+            0 0 35px rgba(0, 209, 255, 0.3),
+            0 0 50px rgba(0, 113, 206, 0.2);
+    }
+}
+
+/* --- Tech Ticker (Marquee) --- */
+.tech-ticker {
+    background: rgba(15, 37, 72, 0.4);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(0, 209, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 209, 255, 0.2);
+}
+.ticker-content {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: ticker-move 40s linear infinite;
+}
+
+@keyframes ticker-move {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
