@@ -1742,13 +1742,23 @@
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
             let particles = [];
-            const particleCount = 100; /* Increased from 85 */
-            const maxDistance = 250; /* Increased from 220 */
+            let particleCount = 100;
+            let maxDistance = 250;
             let mouse = { x: null, y: null };
 
             function init() {
                 canvas.width = canvas.parentElement.offsetWidth;
                 canvas.height = canvas.parentElement.offsetHeight;
+
+                // Responsive settings
+                if (window.innerWidth < 768) {
+                    particleCount = 40;
+                    maxDistance = 150;
+                } else {
+                    particleCount = 100;
+                    maxDistance = 250;
+                }
+
                 particles = [];
                 for (let i = 0; i < particleCount; i++) {
                     particles.push({
