@@ -87,10 +87,10 @@ export default function App() {
       {/* Navigation Controls */}
       <div className="absolute bottom-6 left-0 right-0 z-20 flex flex-col items-center gap-4">
         <div className="flex items-center gap-4 md:hidden">
-            <button onClick={prevSlide} disabled={currentSlide === 0} className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 disabled:opacity-30">←</button>
-            <button onClick={nextSlide} disabled={currentSlide === SLIDES_COUNT - 1} className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 disabled:opacity-30">→</button>
+          <button onClick={prevSlide} disabled={currentSlide === 0} className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 disabled:opacity-30">←</button>
+          <button onClick={nextSlide} disabled={currentSlide === SLIDES_COUNT - 1} className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 disabled:opacity-30">→</button>
         </div>
-        
+
         <div className="flex gap-2">
           {Array.from({ length: SLIDES_COUNT }).map((_, i) => (
             <button
@@ -109,7 +109,7 @@ export default function App() {
       <button onClick={prevSlide} disabled={currentSlide === 0} className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full items-center justify-center bg-white/5 hover:bg-white/10 transition-colors disabled:opacity-0 group">
         <span className="text-2xl group-hover:-translate-x-1 transition-transform">←</span>
       </button>
-      
+
       <button onClick={nextSlide} disabled={currentSlide === SLIDES_COUNT - 1} className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full items-center justify-center bg-white/5 hover:bg-white/10 transition-colors disabled:opacity-0 group">
         <span className="text-2xl group-hover:translate-x-1 transition-transform">→</span>
       </button>
@@ -207,11 +207,11 @@ const DaySlide = ({ day, events }) => (
   </div>
 );
 
-const Slide5 = () => <DaySlide day="Lunes 8 de Junio" events={[{ title: "London Tech Week en Olympia", time: "All Day", icon: <MapPin />, highlight: "blue" }, { title: "Cóctel de bienvenida · Delegación oficial", time: "PM", icon: <Users />, highlight: "gold" }]} />;
-const Slide6 = () => <DaySlide day="Martes 9 de Junio" events={[{ title: "London Tech Week en Olympia", time: "All Day", icon: <MapPin />, highlight: "blue" }, { title: "Breakfast VC Session — EBS & Eagle Labs", time: "AM", icon: <Users />, highlight: "none" }, { title: "Between Bridges Party", time: "PM", icon: <Globe />, highlight: "none" }]} />;
-const Slide7 = () => <DaySlide day="Miércoles 10 de Junio" events={[{ title: "London Tech Week en Olympia", time: "All Day", icon: <MapPin />, highlight: "blue" }, { title: "Reuniones Sectoriales", time: "All Day", icon: <Users />, highlight: "none" }]} />;
-const Slide8 = () => <DaySlide day="Jueves 11 de Junio" events={[{ title: "Canninghouse UK–Latin America Tech Forum", time: "All Day", icon: <Globe />, highlight: "gold" }]} />;
-const Slide9 = () => <DaySlide day="Viernes 12 de Junio" events={[{ title: "The AI Summit London", time: "All Day", icon: <TrendingUp />, highlight: "red" }]} />;
+const Slide5 = () => <DaySlide day="Lunes 8 de Junio" events={[{ title: "Breakfast VC Session — EBS & Eagle Labs", time: "AM", icon: <Users />, highlight: "none" }, { title: "London Tech Week @ Olympia", time: "All Day", icon: <MapPin />, highlight: "blue" }, { title: "Cóctel de bienvenida · Delegación oficial", time: "PM", icon: <Users />, highlight: "gold" }]} />;
+const Slide6 = () => <DaySlide day="Martes 9 de Junio" events={[{ title: "London Tech Week @ Olympia", time: "All Day", icon: <MapPin />, highlight: "blue" }, { title: "Between Bridges Party", time: "PM", icon: <Globe />, highlight: "none" }]} />;
+const Slide7 = () => <DaySlide day="Miércoles 10 de Junio" events={[{ title: "London Tech Week @ Olympia", time: "All Day", icon: <MapPin />, highlight: "blue" }, { title: "The AI Summit London", time: "All Day", icon: <TrendingUp />, highlight: "red" }]} />;
+const Slide8 = () => <DaySlide day="Jueves 11 de Junio" events={[{ title: "The AI Summit London", time: "All Day", icon: <TrendingUp />, highlight: "red" }, { title: "Reuniones Sectoriales", time: "AM", icon: <Users />, highlight: "none" }, { title: "Canninghouse UK–Latin America Tech Forum", time: "PM", icon: <Globe />, highlight: "gold" }]} />;
+const Slide9 = () => <DaySlide day="Viernes 12 de Junio" events={[{ title: "Optional Visit / Day Trip", time: "All Day", icon: <MapPin />, highlight: "none" }]} />;
 
 const Slide10 = () => (
   <div className="w-full max-w-5xl text-center">
@@ -263,9 +263,9 @@ const Slide13 = ({ onNext }) => (
     <div className="bg-[#CF142B]/20 border-2 border-[#CF142B] text-white px-8 py-4 rounded-xl mb-12 text-xl font-bold z-10 shadow-[0_0_30px_rgba(207,20,43,0.3)]">
       ⚡ Cupo máximo para 18 delegados. Los cupos son limitados.
     </div>
-    <button onClick={onNext} className="bg-white text-[#CF142B] hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-bold transition-transform hover:scale-105 z-10">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform" target="_blank" className="bg-white text-[#CF142B] hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-bold transition-transform hover:scale-105 z-10">
       Postular ahora →
-    </button>
+    </a>
   </div>
 );
 
@@ -278,7 +278,7 @@ const Slide14 = () => (
     <p className="text-xl md:text-2xl text-[#A0AABB] max-w-3xl mb-12 z-10">
       Los cupos son limitados. Postula hoy y lleva tu empresa al ecosistema tecnológico más importante del mundo.
     </p>
-    <a href="#" className="bg-[#CF142B] hover:bg-red-600 text-white px-12 py-5 rounded-full text-2xl font-bold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(207,20,43,0.8)] z-10 animate-pulse">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform" target="_blank" className="bg-[#CF142B] hover:bg-red-600 text-white px-12 py-5 rounded-full text-2xl font-bold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(207,20,43,0.8)] z-10 animate-pulse">
       Postular ahora →
     </a>
     <div className="absolute bottom-12 text-xs text-[#A0AABB] tracking-widest uppercase z-10 opacity-50">

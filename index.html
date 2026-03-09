@@ -62,6 +62,9 @@
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .section-title-img {
+            @apply w-full max-w-[480px] md:max-w-[720px] h-auto mx-auto block;
+        }
     </style>
 
 </head>
@@ -82,7 +85,7 @@
                 <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#quienessomos">¿Quiénes Somos?</a>
                 <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
-                    href="#por-que-uk">¿Por qué Reino Unido?</a>
+                    href="#por-que-ltw">¿Por qué London Tech Week?</a>
                 <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
                     href="#agenda">Agenda</a>
                 <a class="nav-link text-[10px] font-black uppercase tracking-widest hover:text-lightblue transition-colors"
@@ -97,7 +100,7 @@
             <a id="desktop-header-cta"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
                 target="_blank"
-                class="hidden lg:inline-flex bg-lightblue text-white text-[12px] font-black uppercase tracking-tighter sharp-btn shadow-[6px_6px_0px_0px_rgba(15,37,72,0.3)] px-6 py-3 hover:bg-primary hover:-translate-y-2 hover:translate-x-2 transition-all duration-200 items-center gap-2">
+                class="hidden lg:inline-flex bg-lightblue text-white text-[12px] font-black uppercase tracking-tighter sharp-btn shadow-[6px_6px_0px_0px_rgba(15,37,72,0.3)] px-6 py-3 hover:bg-white hover:text-lightblue hover:shadow-none border border-transparent hover:border-lightblue transition-all duration-200 items-center gap-2">
                 Inscríbete
                 <span class="material-symbols-outlined text-lg font-black">arrow_forward</span>
             </a>
@@ -115,7 +118,7 @@
                 <a class="text-primary text-base font-black uppercase tracking-widest hover:text-lightblue transition-colors border-b border-gray-100 pb-4"
                     href="#quienessomos" onclick="closeMobileMenu()">¿Quiénes Somos?</a>
                 <a class="text-primary text-base font-black uppercase tracking-widest hover:text-lightblue transition-colors border-b border-gray-100 pb-4"
-                    href="#por-que-uk" onclick="closeMobileMenu()">¿Por qué Reino Unido?</a>
+                    href="#por-que-ltw" onclick="closeMobileMenu()">¿Por qué London Tech Week?</a>
                 <a class="text-primary text-base font-black uppercase tracking-widest hover:text-lightblue transition-colors border-b border-gray-100 pb-4"
                     href="#agenda" onclick="closeMobileMenu()">Agenda</a>
                 <a class="text-primary text-base font-black uppercase tracking-widest hover:text-lightblue transition-colors border-b border-gray-100 pb-4"
@@ -124,7 +127,7 @@
                     href="#inversion" onclick="closeMobileMenu()">Invierte en ti</a>
                 <a class="text-primary text-base font-black uppercase tracking-widest hover:text-lightblue transition-colors border-b border-gray-100 pb-4"
                     href="#faq" onclick="closeMobileMenu()">FAQ</a>
-                <a class="bg-primary text-white text-center px-8 py-4 mt-2 text-sm font-black uppercase tracking-widest sharp-btn hover:bg-lightblue hover:text-white hover:-translate-y-2 hover:translate-x-2 transition-all duration-200 active:scale-95"
+                <a class="bg-lightblue text-white text-center px-8 py-4 mt-2 text-sm font-black uppercase tracking-widest sharp-btn hover:bg-white hover:text-lightblue border border-transparent hover:border-lightblue transition-all duration-200 active:scale-95"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
                     target="_blank" onclick="closeMobileMenu()">Inscríbete</a>
             </nav>
@@ -168,15 +171,14 @@
                 class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center w-full pt-24 pb-12 lg:pt-28 md:pb-0">
                 <img id="hero-logo" src="logos/logos empresas/britwhite.png" alt="BritCham Logo"
                     class="h-[83px] md:h-[250px] lg:h-[188px] mx-auto mb-4 md:mb-6 opacity-90" />
-                <div id="hero-mision"
-                    class="inline-block bg-lightblue text-white px-6 py-2 md:px-10 md:py-4 mb-8 border-2 border-primary">
+                <div id="hero-mision" class="inline-block text-white mb-8">
                     <span
                         class="text-xs md:text-sm font-black uppercase tracking-[0.2em] md:tracking-[0.3em] inline-block scale-110">Misión
                         Comercial
                         2026</span>
                 </div>
                 <h1 id="hero-title"
-                    class="brutalist-text text-[15vw] lg:text-[10rem] text-white mb-6 drop-shadow-2xl leading-none">
+                    class="brutalist-text text-[12vw] lg:text-[8rem] text-white mb-6 drop-shadow-2xl leading-none">
                     London<br />Tech Week
                 </h1>
                 <div id="hero-year-container" class="flex items-center justify-center gap-4 md:gap-8 mb-8 md:mb-12">
@@ -208,58 +210,72 @@
                         </div>
                     </div>
                 </div>
-                <a id="final-cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
+                <a id="hero-cta-btn"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
                     target="_blank"
-                    class="mx-auto w-full md:w-auto bg-lightblue text-white px-8 py-6 md:px-16 md:py-8 sharp-btn font-[900] text-xl md:text-2xl uppercase tracking-tighter flex items-center justify-center gap-4 shadow-[8px_8px_0px_0px_rgba(15,37,72,0.5)] md:shadow-[12px_12px_0px_0px_rgba(15,37,72,0.5)] hover:translate-x-2 hover:-translate-y-2 transition-transform">
+                    class="mx-auto w-fit bg-lightblue text-white px-10 py-4 md:px-12 md:py-6 sharp-btn font-[900] text-xl md:text-2xl uppercase tracking-tighter flex items-center justify-center gap-4 shadow-[8px_8px_0px_0px_rgba(15,37,72,0.5)] md:shadow-[12px_12px_0px_0px_rgba(15,37,72,0.5)] hover:bg-white hover:text-primary transition-all">
                     Inscríbete
                     <span class="material-symbols-outlined font-black">arrow_forward</span>
                 </a>
             </div>
         </section>
-        <section id="quienessomos"
-            class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-32 bg-accent relative overflow-hidden">
-            <div class="absolute inset-0 diagonal-pattern-navy opacity-10"></div>
-            <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
-                <div class="lg:w-1/3 text-center lg:text-left flex justify-center lg:justify-center">
-                    <img id="quienes-somos-title" src="titulos/quienes-somos-m.png" alt="¿Quiénes Somos?"
-                        class="w-full max-w-[400px] lg:max-w-[540px] h-auto scroll-trigger">
+        <section id="quienessomos" class="relative py-12 md:py-24 bg-accent overflow-hidden">
+            <div class="absolute inset-0 diagonal-pattern-navy opacity-5"></div>
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center">
+
+                <!-- Large Centered Title -->
+                <div class="w-full flex justify-center mb-8 md:mb-12">
+                    <img id="quienes-somos-title" src="titulos/quienes-somos-m.png?v=3" alt="¿Quiénes Somos?"
+                        class="section-title-img scroll-trigger">
                 </div>
-                <div class="lg:w-2/3 space-y-8 md:space-y-12 scroll-trigger text-left">
-                    <p
-                        class="text-lg md:text-xl font-bold text-primary border-l-4 md:border-l-8 border-lightblue pl-4 md:pl-6">
-                        Britcham Chile: cámara bilateral que promueve el comercio, inversión y colaboración empresarial
-                        entre Chile y el Reino Unido.
+
+                <!-- Descriptive Text - Now after the title -->
+                <div class="w-full flex flex-col items-center text-center mb-12 md:mb-16">
+                    <p class="text-xl md:text-3xl font-black text-primary leading-tight max-w-4xl mb-6 scroll-trigger">
+                        BritCham Chile: la cámara bilateral líder que impulsa el comercio, la inversión y la
+                        colaboración empresarial estratégica entre Chile y el Reino Unido.
                     </p>
-                    <ul class="space-y-8 md:space-y-12 text-primary font-[500] text-lg md:text-xl">
-                        <li>
-                            <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8 font-bold">
-                                <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
-                                Nuestra red institucional
-                            </div>
-                            <div
-                                class="flex flex-nowrap items-center justify-center gap-3 md:gap-12 lg:gap-20 pl-0 md:pl-6 pt-2 md:pt-4">
-                                <img src="logos/logos empresas/FCDO_CL_SCL_1S (3) ENG(2).png"
-                                    alt="British Embassy Santiago" class="h-14 md:h-24 object-contain mix-blend-multiply">
-                                <img src="logos/logos empresas/DBT LOGO Transparent.png"
-                                    alt="Department for Business & Trade" class="h-12 md:h-20 object-contain mix-blend-multiply">
-                                <img src="logos/logos empresas/britrish chamber.png" alt="British Chambers of Commerce" class="h-12 md:h-20 object-contain mix-blend-multiply">
-                                <img src="logos/logos empresas/Britlac-transparentBG_.png" alt="Britlac" class="h-10 md:h-14 object-contain mix-blend-multiply">
-                            </div>
-                        </li>
-                        <li class="flex items-center gap-3 md:gap-4 font-bold max-w-2xl">
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
-                            <span>Organizadores de la delegación oficial desde Chile a London Tech Week 2026</span>
-                        </li>
-                    </ul>
+                    <div class="flex items-center gap-6 scroll-trigger">
+                        <span
+                            class="text-lg md:text-xl font-black uppercase tracking-widest text-primary/40">Organizadores
+                            Delegación Oficial 2026</span>
+                    </div>
                 </div>
+
+                <!-- Institutional Network Area - Centered -->
+                <div id="institutional-network" class="w-full text-center pt-12 border-t border-primary/10">
+                    <div class="scroll-trigger mb-8">
+                        <h3 class="text-lightblue font-black uppercase tracking-[0.3em] text-sm mb-4">Nuestra red
+                            institucional</h3>
+                        <img id="respaldados-title" src="titulos/respaldados.png?v=3"
+                            alt="Respaldados por quienes abren puertas" class="section-title-img scroll-trigger mb-4">
+                        <p class="text-primary/60 text-xl font-bold max-w-2xl mx-auto">
+                            Una red de alianzas estratégicas que garantiza el éxito institucional de tu misión comercial
+                            en el Reino Unido.
+                        </p>
+                    </div>
+
+                    <div
+                        class="network-logos flex flex-wrap justify-center items-center gap-12 md:gap-24 scroll-trigger">
+                        <img src="logos/logos empresas/FCDO_CL_SCL_1S (3) ENG(2).png" alt="British Embassy Santiago"
+                            class="h-20 md:h-32 object-contain opacity-80 hover:opacity-100 transition-all mix-blend-multiply">
+                        <img src="logos/logos empresas/DBT LOGO Transparent.png" alt="Department for Business & Trade"
+                            class="h-16 md:h-24 object-contain opacity-80 hover:opacity-100 transition-all mix-blend-multiply">
+                        <img src="logos/logos empresas/britrish chamber.png" alt="British Chambers of Commerce"
+                            class="h-16 md:h-24 object-contain opacity-80 hover:opacity-100 transition-all mix-blend-multiply">
+                        <img src="logos/logos empresas/Britlac-transparentBG_.png" alt="Britlac"
+                            class="h-14 md:h-20 object-contain opacity-80 hover:opacity-100 transition-all mix-blend-multiply">
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section
-            class="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-20 bg-white text-center scroll-trigger border-b-4 border-slate-100 mb-8 md:mb-16">
-            <h3 class="text-sm md:text-base font-black uppercase tracking-widest text-primary mb-8 md:mb-12">Platinum
+            class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-12 bg-white text-center scroll-trigger border-b-4 border-slate-100 mb-4 md:mb-8">
+            <h3 class="text-sm md:text-base font-black uppercase tracking-widest text-primary mb-6 md:mb-8">Platinum
                 Investors</h3>
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 lg:gap-24 mb-16 md:mb-24">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 lg:gap-24 mb-10 md:mb-16">
                 <img src="logos/logos empresas/Anglo Logo.png" alt="Anglo"
                     class="h-10 md:h-16 object-contain scroll-trigger" style="animation-delay: 100ms">
                 <img src="logos/logos empresas/Bupa-logo.png" alt="Bupa"
@@ -273,7 +289,7 @@
             </div>
 
             <h3
-                class="text-sm md:text-base font-black uppercase tracking-widest text-primary mb-8 md:mb-12 mt-8 md:mt-12 scroll-trigger">
+                class="text-sm md:text-base font-black uppercase tracking-widest text-primary mb-6 md:mb-8 mt-6 md:mt-8 scroll-trigger">
                 Gold
                 Investors</h3>
             <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-16">
@@ -290,256 +306,438 @@
             </div>
         </section>
 
-        <section class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 md:py-16 bg-white">
-            <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-items-center sm:justify-items-stretch">
-                <!-- Stat 1 -->
-                <div class="relative scroll-trigger w-full max-w-[280px] sm:max-w-none text-center sm:text-left"
-                    style="animation-delay: 0ms">
-                    <div class="text-primary font-black text-xs uppercase tracking-widest mb-2 md:mb-4">Participantes
-                        Globales
-                    </div>
-                    <div
-                        class="bg-primary p-6 md:p-8 inline-block angled-block w-full text-center sm:text-left transition-all">
-                        <div class="flex items-baseline justify-center sm:justify-start gap-2 text-white">
-                            <span class="brutalist-text text-[4rem] md:text-8xl">30k</span>
-                            <span class="text-3xl md:text-4xl font-black text-lightblue">+</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Stat 2 -->
-                <div class="relative scroll-trigger w-full max-w-[280px] sm:max-w-none text-center sm:text-left"
-                    style="animation-delay: 150ms">
-                    <div class="text-primary font-black text-xs uppercase tracking-widest mb-2 md:mb-4">Países
-                        Representados
-                    </div>
-                    <div
-                        class="bg-primary p-6 md:p-8 inline-block angled-block w-full text-center sm:text-left transition-all">
-                        <div class="flex items-baseline justify-center sm:justify-start gap-2 text-white">
-                            <span class="brutalist-text text-[4rem] md:text-8xl">128</span>
-                            <span class="text-3xl md:text-4xl font-black text-lightblue">+</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Stat 3 -->
-                <div class="relative scroll-trigger w-full max-w-[280px] sm:max-w-none text-center sm:text-left"
-                    style="animation-delay: 300ms">
-                    <div class="text-primary font-black text-xs uppercase tracking-widest mb-2 md:mb-4">Speakers
-                        Expertos</div>
-                    <div
-                        class="bg-primary p-6 md:p-8 inline-block angled-block w-full text-center sm:text-left transition-all">
-                        <div class="flex items-baseline justify-center sm:justify-start gap-2 text-white">
-                            <span class="brutalist-text text-[4rem] md:text-8xl">400</span>
-                            <span class="text-3xl md:text-4xl font-black text-lightblue">+</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Stat 4 -->
-                <div class="relative scroll-trigger w-full max-w-[280px] sm:max-w-none text-center sm:text-left"
-                    style="animation-delay: 450ms">
-                    <div class="text-primary font-black text-xs uppercase tracking-widest mb-2 md:mb-4">Cupos Misión
-                    </div>
-                    <div
-                        class="bg-white border-[6px] md:border-8 border-primary p-4 md:p-6 inline-block w-full text-center transition-all">
-                        <div class="flex items-center justify-center gap-2 md:gap-4 mt-1 md:mt-0">
-                            <span class="brutalist-text text-[4rem] md:text-8xl text-primary">18</span>
-                            <span
-                                class="material-symbols-outlined text-lightblue text-[2.5rem] md:text-5xl font-black">group_add</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="por-que-uk"
-            class="bg-accent slanted-divider-top slanted-divider-bottom py-20 md:py-40 relative overflow-hidden">
-            <div class="absolute inset-0 diagonal-pattern-navy opacity-40"></div>
+        <section id="por-que-ltw" class="bg-primary py-12 md:py-20 relative overflow-hidden">
+            <div class="absolute inset-0 diagonal-pattern-navy opacity-20"></div>
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-                <div class="flex justify-center mb-12 md:mb-24">
-                    <img id="why-uk-title" src="titulos/porqueukm.png" alt="¿Por qué Reino Unido?"
-                        class="w-full max-w-[500px] lg:max-w-[800px] h-auto scroll-trigger">
+                <div class="text-center mb-8 md:mb-12">
+                    <img id="why-uk-title" src="titulos/5 dias que pueden cambiar el rumbro de tu empresa.png?v=3"
+                        alt="5 días que pueden cambiar el rumbo de tu empresa"
+                        class="section-title-img scroll-trigger mb-6">
+                    <p id="why-ltw-subtitle"
+                        class="text-lightblue text-lg md:text-2xl font-black uppercase tracking-[0.3em]">
+                        ¿Por qué London Tech Week?
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <!-- Card 1: El Evento -->
                     <div
-                        class="why-uk-card bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
-                        <svg class="mb-6 md:mb-8 text-lightblue w-12 h-12 md:w-16 md:h-16"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                            <path d="M2 12h20" />
-                        </svg>
-                        <h3 class="text-2xl md:text-3xl font-[900] uppercase tracking-wide mb-4 md:mb-6">#1 en Europa
-                            para FDI</h3>
-                        <p class="text-primary text-base font-bold leading-relaxed">Puerta de entrada a mercados
-                            globales (EE. UU., Europa y Medio Oriente)</p>
+                        class="why-card bg-white p-8 border-l-8 border-lightblue scroll-trigger hover:-translate-y-2 transition-all duration-300 shadow-[12px_12px_0px_0px_#041c3d]">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-lightblue text-4xl"
+                                style="font-variation-settings: 'wght' 200">language</span>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="brutalist-text text-5xl md:text-6xl text-primary">30k</span>
+                                <span class="text-2xl font-black text-lightblue">+</span>
+                            </div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary/40">Asistentes</p>
+                        </div>
+                        <h3 class="text-xl font-black uppercase text-primary mb-4">El evento</h3>
+                        <p class="text-primary/80 text-sm font-bold leading-relaxed">
+                            Participantes de 128 países convergiendo en el epicentro tecnológico de Europa.
+                        </p>
                     </div>
+
+                    <!-- Card 2: La Agenda -->
                     <div
-                        class="why-uk-card bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
-                        <svg class="mb-6 md:mb-8 text-lightblue w-12 h-12 md:w-16 md:h-16"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 3v18" />
-                            <path d="M3 12h18" />
-                            <path d="M6 6l12 12" />
-                            <path d="M18 6L6 18" />
-                            <circle cx="12" cy="12" r="2" fill="currentColor" />
-                        </svg>
-                        <h3 class="text-2xl md:text-3xl font-[900] uppercase tracking-wide mb-4 md:mb-6">#1 en Europa
-                            número
-                            de unicornios</h3>
-                        <p class="text-primary text-base font-bold leading-relaxed">Ecosistema altamente conectado:
-                            corporates, startups, universidades e inversionistas</p>
+                        class="why-card bg-white p-8 border-l-8 border-lightblue scroll-trigger hover:-translate-y-2 transition-all duration-300 shadow-[12px_12px_0px_0px_#041c3d]">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-lightblue text-4xl"
+                                style="font-variation-settings: 'wght' 200">event_note</span>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="brutalist-text text-5xl md:text-6xl text-primary">400</span>
+                                <span class="text-2xl font-black text-lightblue">+</span>
+                            </div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary/40">Speakers</p>
+                        </div>
+                        <h3 class="text-xl font-black uppercase text-primary mb-4">La agenda</h3>
+                        <p class="text-primary/80 text-sm font-bold leading-relaxed">
+                            AI Impact, AGI Evolution, Deep Tech, y las conversaciones que definen el futuro de la
+                            industria.
+                        </p>
                     </div>
+
+                    <!-- Card 3: Tu Red -->
                     <div
-                        class="why-uk-card bg-white p-8 md:p-12 border-l-8 md:border-l-[16px] border-primary shadow-[12px_12px_0px_0px_rgba(15,37,72,0.1)] scroll-trigger">
-                        <svg class="mb-6 md:mb-8 text-lightblue w-12 h-12 md:w-16 md:h-16"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="16" height="16" x="4" y="4" rx="2" />
-                            <rect width="6" height="6" x="9" y="9" rx="1" />
-                            <path d="M15 2v2" />
-                            <path d="M15 20v2" />
-                            <path d="M2 15h2" />
-                            <path d="M2 9h2" />
-                            <path d="M20 15h2" />
-                            <path d="M20 9h2" />
-                            <path d="M9 2v2" />
-                            <path d="M9 20v2" />
-                        </svg>
-                        <h3 class="text-2xl md:text-3xl font-[900] uppercase tracking-wide mb-4 md:mb-6">+170.000
-                            empresas tecnológicas
-                        </h3>
-                        <p class="text-primary text-base font-bold leading-relaxed">Fuerte presencia de fondos,
-                            aceleradoras y programas de scale-up</p>
+                        class="why-card bg-white p-8 border-l-8 border-lightblue scroll-trigger hover:-translate-y-2 transition-all duration-300 shadow-[12px_12px_0px_0px_#041c3d]">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-lightblue text-4xl"
+                                style="font-variation-settings: 'wght' 200">hub</span>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="brutalist-text text-5xl md:text-6xl text-primary">Top</span>
+                            </div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary/40">Networking</p>
+                        </div>
+                        <h3 class="text-xl font-black uppercase text-primary mb-4">Tu red</h3>
+                        <p class="text-primary/80 text-sm font-bold leading-relaxed">
+                            Acceso directo a corporates, VCs, aceleradoras, universidades y los tomadores de decisión
+                            que importan.
+                        </p>
+                    </div>
+
+                    <!-- Card 4: Cupos Misión -->
+                    <div
+                        class="why-card bg-white p-8 border-l-8 border-lightblue scroll-trigger hover:-translate-y-2 transition-all duration-300 shadow-[12px_12px_0px_0px_#041c3d]">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-lightblue text-4xl"
+                                style="font-variation-settings: 'wght' 200">verified</span>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-1">
+                                <span class="brutalist-text text-5xl md:text-6xl text-primary">18</span>
+                            </div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary/40">Cupos Misión</p>
+                        </div>
+                        <h3 class="text-xl font-black uppercase text-primary mb-4">Exclusividad</h3>
+                        <p class="text-primary/80 text-sm font-bold leading-relaxed">
+                            Experiencia exclusiva con cupos limitados para una delegación seleccionada.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="agenda" class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-32 bg-white overflow-x-hidden">
+        <section id="agenda" class="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-20 bg-white overflow-x-hidden">
             <div class="flex flex-col items-center">
-                <div class="w-full mb-16 md:mb-24 text-center">
+                <div class="w-full mb-6 md:mb-8 text-center">
                     <div class="scroll-trigger inline-block">
-                        <h2 class="brutalist-text text-7xl md:text-9xl text-primary mb-2 md:mb-4">Agenda</h2>
-                        <div class="h-4 md:h-6 w-32 md:w-48 bg-lightblue mb-6 md:mb-8 mx-auto"></div>
-                        <span class="text-primary font-black uppercase tracking-widest text-sm md:text-base">5 Días
-                            Intensivos ·
-                            Junio 2026</span>
+                        <img id="agenda-title" src="titulos/tu semana en londres.png?v=3" alt="Tu semana en Londres"
+                            class="section-title-img scroll-trigger mb-4 md:mb-6">
+
+                        <!-- Countdown Timer -->
+                        <div id="countdown" class="flex justify-center gap-4 md:gap-8 mb-4 scroll-trigger">
+                            <div class="flex flex-col items-center">
+                                <span id="days"
+                                    class="text-4xl md:text-6xl font-[950] text-lightblue tracking-tighter">00</span>
+                                <span
+                                    class="text-[10px] md:text-xs font-black uppercase tracking-widest text-primary/60">días</span>
+                            </div>
+                            <span class="text-4xl md:text-6xl font-[950] text-primary/20">:</span>
+                            <div class="flex flex-col items-center">
+                                <span id="hours"
+                                    class="text-4xl md:text-6xl font-[950] text-lightblue tracking-tighter">00</span>
+                                <span
+                                    class="text-[10px] md:text-xs font-black uppercase tracking-widest text-primary/60">horas</span>
+                            </div>
+                            <span class="text-4xl md:text-6xl font-[950] text-primary/20">:</span>
+                            <div class="flex flex-col items-center">
+                                <span id="minutes"
+                                    class="text-4xl md:text-6xl font-[950] text-lightblue tracking-tighter">00</span>
+                                <span
+                                    class="text-[10px] md:text-xs font-black uppercase tracking-widest text-primary/60">minutos</span>
+                            </div>
+                        </div>
+
+                        <!-- Legend -->
+                        <div id="agenda-legend"
+                            class="flex flex-wrap justify-center gap-4 md:gap-6 mb-4 scroll-trigger">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-lightblue"></span>
+                                <span
+                                    class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary">Conferencia</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-purple-600"></span>
+                                <span
+                                    class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary">Networking</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-600"></span>
+                                <span
+                                    class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary">Sesión
+                                    exclusiva</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-slate-400"></span>
+                                <span
+                                    class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary">Opcional</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="w-full max-w-4xl space-y-12 md:space-y-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
                     <!-- Day 1 -->
-                    <div class="agenda-card relative pl-8 md:pl-12 border-l-4 md:border-l-8 border-primary">
-                        <div
-                            class="absolute -left-[14px] md:-left-[20px] top-0 w-6 h-6 md:w-8 md:h-8 bg-lightblue border-4 border-primary">
+                    <div
+                        class="agenda-card group bg-[#f8fafc] border-2 border-primary p-6 hover:bg-primary transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-[8px_8px_0px_0px_rgba(15,37,72,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,113,206,0.5)]">
+                        <div class="flex flex-col mb-6">
+                            <span
+                                class="text-5xl font-[950] text-primary group-hover:text-white transition-colors tracking-tighter">08</span>
+                            <span
+                                class="text-xl font-bold text-lightblue uppercase tracking-widest group-hover:text-white/80 transition-colors">JUN
+                                / LUN</span>
                         </div>
-                        <p class="text-sm font-black uppercase tracking-[0.3em] mb-4 text-lightblue">DÍA 1
-                        </p>
-                        <h4
-                            class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary mb-4 md:mb-6">
-                            Breakfast VC session hosted by EBS & Barclay's Eagle Labs - TBC</h4>
-                        <h4
-                            class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary mb-4 md:mb-6">
-                            Visita London Tech Week @ Olympia</h4>
-                        <h4 class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary">Cóctel de
-                            bienvenida delegación - TBC</h4>
+                        <div class="space-y-4 flex-grow">
+                            <!-- All Day First -->
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    ALL DAY</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-lightblue text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Conferencia</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    London Tech Week @ Olympia</h4>
+                            </div>
+                            <!-- Others -->
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    AM</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-red-600 text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Sesión
+                                    Exclusiva</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    Breakfast VC Session (EBS & Eagle Labs)</h4>
+                            </div>
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    PM</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-purple-600 text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Networking</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    Cóctel de Bienvenida</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Day 2 -->
-                    <div class="agenda-card relative pl-8 md:pl-12 border-l-4 md:border-l-8 border-primary">
-                        <div
-                            class="absolute -left-[14px] md:-left-[20px] top-0 w-6 h-6 md:w-8 md:h-8 bg-lightblue border-4 border-primary">
+                    <div
+                        class="agenda-card group bg-[#f8fafc] border-2 border-primary p-6 hover:bg-primary transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-[8px_8px_0px_0px_rgba(15,37,72,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,113,206,0.5)]">
+                        <div class="flex flex-col mb-6">
+                            <span
+                                class="text-5xl font-[950] text-primary group-hover:text-white transition-colors tracking-tighter">09</span>
+                            <span
+                                class="text-xl font-bold text-lightblue uppercase tracking-widest group-hover:text-white/80 transition-colors">JUN
+                                / MAR</span>
                         </div>
-                        <p class="text-sm font-black uppercase tracking-[0.3em] mb-4 text-lightblue">DÍA 2
-                        </p>
-                        <h4
-                            class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary mb-4 md:mb-6">
-                            Fireside Chat with Amazon Head of AI Product - TBC</h4>
-                        <h4 class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary">Between
-                            Bridges Party</h4>
+                        <div class="space-y-4 flex-grow">
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    ALL DAY</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-lightblue text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Conferencia</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    London Tech Week @ Olympia</h4>
+                            </div>
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    PM</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-purple-600 text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Networking</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    Between Bridges Party</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Day 3 -->
-                    <div class="agenda-card relative pl-8 md:pl-12 border-l-4 md:border-l-8 border-primary">
-                        <div
-                            class="absolute -left-[14px] md:-left-[20px] top-0 w-6 h-6 md:w-8 md:h-8 bg-lightblue border-4 border-primary">
+                    <div
+                        class="agenda-card group bg-[#f8fafc] border-2 border-primary p-6 hover:bg-primary transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-[8px_8px_0px_0px_rgba(15,37,72,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,113,206,0.5)]">
+                        <div class="flex flex-col mb-6">
+                            <span
+                                class="text-5xl font-[950] text-primary group-hover:text-white transition-colors tracking-tighter">10</span>
+                            <span
+                                class="text-xl font-bold text-lightblue uppercase tracking-widest group-hover:text-white/80 transition-colors">JUN
+                                / MIÉ</span>
                         </div>
-                        <p class="text-sm font-black uppercase tracking-[0.3em] mb-4 text-lightblue">DÍA 3
-                        </p>
-                        <h4
-                            class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary mb-4 md:mb-6">
-                            Reuniones sectoriales - TBC</h4>
-                        <h4 class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary">Visita
-                            London Tech Week @ Olympia</h4>
+                        <div class="space-y-4 flex-grow">
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    ALL DAY</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-lightblue text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Conferencia</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    London Tech Week @ Olympia</h4>
+                            </div>
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    ALL DAY</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-lightblue text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Conferencia</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    The AI Summit London</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Day 4 -->
-                    <div class="agenda-card relative pl-8 md:pl-12 border-l-4 md:border-l-8 border-primary">
-                        <div
-                            class="absolute -left-[14px] md:-left-[20px] top-0 w-6 h-6 md:w-8 md:h-8 bg-lightblue border-4 border-primary">
+                    <div
+                        class="agenda-card group bg-[#f8fafc] border-2 border-primary p-6 hover:bg-primary transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-[8px_8px_0px_0px_rgba(15,37,72,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,113,206,0.5)]">
+                        <div class="flex flex-col mb-6">
+                            <span
+                                class="text-5xl font-[950] text-primary group-hover:text-white transition-colors tracking-tighter">11</span>
+                            <span
+                                class="text-xl font-bold text-lightblue uppercase tracking-widest group-hover:text-white/80 transition-colors">JUN
+                                / JUE</span>
                         </div>
-                        <p class="text-sm font-black uppercase tracking-[0.3em] mb-4 text-lightblue">DÍA 4
-                        </p>
-                        <h4 class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary">Canning
-                            House's UK- Latin America Tech Forum. Hosted by Amazon</h4>
+                        <div class="space-y-4 flex-grow">
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    ALL DAY</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-lightblue text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Conferencia</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    The AI Summit London</h4>
+                            </div>
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    AM</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-red-600 text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Sesión
+                                    Exclusiva</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    Reuniones Sectoriales</h4>
+                            </div>
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    PM</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-purple-600 text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Networking</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    UK-LatAm Tech Forum</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Day 5 -->
-                    <div class="agenda-card relative pl-8 md:pl-12 border-l-4 md:border-l-8 border-primary">
-                        <div
-                            class="absolute -left-[14px] md:-left-[20px] top-0 w-6 h-6 md:w-8 md:h-8 bg-lightblue border-4 border-primary">
+                    <div
+                        class="agenda-card group bg-[#f8fafc] border-2 border-primary p-6 hover:bg-primary transition-all duration-500 hover:-translate-y-2 flex flex-col h-full shadow-[8px_8px_0px_0px_rgba(15,37,72,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,113,206,0.5)]">
+                        <div class="flex flex-col mb-6">
+                            <span
+                                class="text-5xl font-[950] text-primary group-hover:text-white transition-colors tracking-tighter">12</span>
+                            <span
+                                class="text-xl font-bold text-lightblue uppercase tracking-widest group-hover:text-white/80 transition-colors">JUN
+                                / VIE</span>
                         </div>
-                        <p class="text-sm font-black uppercase tracking-[0.3em] mb-4 text-lightblue">DÍA 5
-                        </p>
-                        <h4 class="text-xl md:text-[27px] font-black uppercase tracking-tighter text-primary">Optional
-                            Visit / Day Trip</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="sumate" class="bg-primary py-16 md:py-32 text-white">
-            <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div class="flex justify-center mb-12 md:mb-20">
-                    <img id="final-mission-title" src="titulos/separtem.png" alt="Sé parte de la Misión Comercial"
-                        class="w-full max-w-[600px] lg:max-w-[900px] h-auto scroll-trigger">
-                </div>
-
-                <div
-                    class="bg-white/10 backdrop-blur-sm p-8 md:p-12 lg:p-16 border-l-8 md:border-l-[16px] border-lightblue scroll-trigger flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-                    <div class="w-full md:w-2/3">
-                        <p class="text-lg md:text-xl lg:text-2xl font-bold leading-relaxed mb-8 md:mb-12 text-white/90">
-                            BritCham Chile es el partner estratégico para acceder al sector tecnológico del Reino Unido,
-                            conectándote con oportunidades de inversión, educación e intercambio de conocimientos.
-                        </p>
-
-                        <h3
-                            class="text-xl md:text-2xl font-black uppercase tracking-widest text-lightblue mb-4 md:mb-6">
-                            Nuestras empresas
-                            objetivo</h3>
-                        <ul
-                            class="space-y-3 md:space-y-4 text-base md:text-lg font-bold text-white/90 list-disc pl-5 md:pl-6">
-                            <li>Empresas tecnológicas de múltiples sectores</li>
-                            <li>No establecidas en el Reino Unido</li>
-                            <li>1 delegado representante por empresa</li>
-                        </ul>
-                    </div>
-
-                    <div class="w-full md:w-1/3 flex justify-center mt-6 md:mt-0">
-                        <div
-                            class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-slate-800 border-4 md:border-8 border-white overflow-hidden shadow-2xl">
-                            <img src="imagencirculo.png" alt="Networking meeting" class="w-full h-full object-cover">
+                        <div class="space-y-4 flex-grow">
+                            <div class="border-t border-primary/10 group-hover:border-white/20 pt-4">
+                                <p
+                                    class="text-[10px] font-black uppercase tracking-[0.2em] text-lightblue group-hover:text-white/70 mb-2">
+                                    ALL DAY</p>
+                                <span
+                                    class="inline-block px-3 py-1 bg-slate-400 text-white text-[11px] font-black uppercase tracking-tight leading-tight rounded group-hover:bg-white group-hover:text-primary">Opcional</span>
+                                <h4
+                                    class="text-sm font-black uppercase tracking-tight text-primary group-hover:text-white leading-tight mt-2">
+                                    Day Trip / Optional Visit</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="inversion"
-            class="bg-accent slanted-divider-top slanted-divider-bottom pt-32 pb-24 md:py-40 relative overflow-hidden">
+        <section id="sumate" class="relative bg-primary py-16 md:py-24 overflow-hidden">
+            <!-- Parallax Background -->
+            <div class="absolute inset-0 z-0">
+                <img id="sumate-parallax-bg" src="imagen3.png" alt="London Tech Scene"
+                    class="w-full h-full object-cover opacity-40 mix-blend-luminosity blur-[2px]">
+                <div class="absolute inset-0 bg-primary/90"></div>
+                <!-- Diagonal Overlay -->
+                <div class="absolute inset-0 diagonal-pattern-white opacity-5"></div>
+            </div>
+
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+                <!-- Temporary Text Title (Pending PNG) -->
+                <div class="text-center mb-12 md:mb-20">
+                    <img id="final-mission-title" src="titulos/elmundotech.png?v=4" alt="El mundo tech no espera"
+                        class="section-title-img scroll-trigger">
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+                    <!-- Left: Stats Column -->
+                    <div class="w-full lg:w-1/2 space-y-12 md:space-y-16">
+                        <!-- Stat 1 -->
+                        <div class="stat-block group scroll-trigger border-l-4 border-lightblue pl-8">
+                            <h3
+                                class="brutalist-text text-6xl md:text-7xl text-lightblue mb-2 group-hover:translate-x-2 transition-transform">
+                                #1</h3>
+                            <p class="text-xl md:text-2xl font-black uppercase tracking-widest text-white mb-2">en
+                                Europa para FDI</p>
+                            <p class="text-white/60 text-lg font-medium">El Reino Unido lidera la inversión extranjera
+                                directa en tecnología en Europa</p>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="stat-block group scroll-trigger border-l-4 border-lightblue pl-8">
+                            <h3
+                                class="brutalist-text text-6xl md:text-7xl text-lightblue mb-2 group-hover:translate-x-2 transition-transform">
+                                #1</h3>
+                            <p class="text-xl md:text-2xl font-black uppercase tracking-widest text-white mb-2">en
+                                unicornios en Europa</p>
+                            <p class="text-white/60 text-lg font-medium">Más de 120 unicornios tecnológicos han nacido
+                                en el ecosistema británico</p>
+                        </div>
+                        <!-- Stat 3 -->
+                        <div class="stat-block group scroll-trigger border-l-4 border-lightblue pl-8">
+                            <h3
+                                class="brutalist-text text-6xl md:text-7xl text-lightblue mb-2 group-hover:translate-x-2 transition-transform">
+                                +170k</h3>
+                            <p class="text-xl md:text-2xl font-black uppercase tracking-widest text-white mb-2">empresas
+                                tech</p>
+                            <p class="text-white/60 text-lg font-medium">Un ecosistema diverso que va desde startups
+                                hasta multinacionales globales</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Highlight Quote Box -->
+                    <div class="w-full lg:w-1/2 lg:sticky lg:top-40">
+                        <div
+                            class="bg-white/[0.05] backdrop-blur-xl p-10 md:p-14 border border-white/10 shadow-2xl relative overflow-hidden group">
+                            <!-- Subtle Blue Accent -->
+                            <div
+                                class="absolute top-0 left-0 w-1.5 h-full bg-lightblue group-hover:h-full transition-all duration-500">
+                            </div>
+
+                            <div class="relative z-10 space-y-8">
+                                <p
+                                    class="text-xl md:text-2xl font-bold leading-tight text-white border-b border-white/10 pb-8">
+                                    Las empresas que lideran mañana son las que construyen sus redes hoy.
+                                </p>
+                                <p class="text-lg md:text-xl font-medium text-white/80 leading-relaxed italic">
+                                    "El Reino Unido no es solo un mercado — es la puerta hacia EE.UU., Europa y Medio
+                                    Oriente desde una sola ciudad."
+                                </p>
+                            </div>
+
+                            <!-- Decorative Dots (Tech style) -->
+                            <div class="absolute bottom-6 right-6 flex gap-2">
+                                <span class="w-1.5 h-1.5 bg-lightblue rounded-full animate-pulse"></span>
+                                <span class="w-1.5 h-1.5 bg-lightblue/40 rounded-full"></span>
+                                <span class="w-1.5 h-1.5 bg-lightblue/20 rounded-full"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="inversion" class="bg-accent pt-20 pb-16 md:py-24 relative overflow-hidden">
             <div class="absolute inset-0 diagonal-pattern-navy opacity-40"></div>
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-                <div class="flex justify-center mb-12 md:mb-24">
-                    <img id="inversion-title" src="titulos/inversiondemisionm.png" alt="Inversión de Misión Comercial"
-                        class="w-full max-w-[700px] lg:max-w-[1000px] h-auto scroll-trigger">
+                <div class="flex justify-center mb-8 md:mb-16">
+                    <img id="inversion-title" src="titulos/inversiondemisionm.png?v=3"
+                        alt="Inversión de Misión Comercial"
+                        class="section-title-img scroll-trigger !max-w-[550px] md:!max-w-[850px]">
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <!-- Box 1 -->
@@ -628,10 +826,10 @@
             </div>
         </section>
 
-        <section id="faq" class="max-w-[1000px] mx-auto px-6 md:px-12 py-16 md:py-32 bg-white">
-            <div class="flex justify-center mb-12 md:mb-16">
-                <img id="faq-title" src="titulos/preguntas.png" alt="Preguntas Frecuentes"
-                    class="w-full max-w-[500px] lg:max-w-[700px] h-auto scroll-trigger">
+        <section id="faq" class="max-w-[1000px] mx-auto px-6 md:px-12 py-12 md:py-24 bg-white">
+            <div class="flex justify-center mb-8 md:mb-12">
+                <img id="faq-title" src="titulos/preguntas.png?v=3" alt="Preguntas Frecuentes"
+                    class="section-title-img scroll-trigger">
             </div>
 
             <div class="space-y-4 faq-container">
@@ -847,45 +1045,98 @@
             </script>
         </section>
 
-        <section id="se-parte" class="relative bg-primary py-24 md:py-48 overflow-hidden scroll-trigger">
+        <section id="se-parte" class="relative bg-primary py-16 md:py-24 overflow-hidden scroll-trigger">
             <!-- Background Image -->
-            <div
-                id="final-parallax-bg" class="absolute inset-0 bg-[url('imagen3.png')] bg-cover bg-center opacity-60 mix-blend-luminosity blur-sm">
+            <div id="final-parallax-bg"
+                class="absolute inset-0 bg-[url('imagen3.png')] bg-cover bg-center opacity-30 mix-blend-luminosity blur-sm">
             </div>
-            <!-- Diagonal White Overlay -->
-            <div class="absolute inset-0 diagonal-pattern-white opacity-30"></div>
+            <!-- Extra dark overlay for text contrast -->
+            <div class="absolute inset-0 bg-primary/20 z-0"></div>
+            <!-- Diagonal Overlay -->
+            <div class="absolute inset-0 diagonal-pattern-white opacity-10"></div>
 
-            <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
-                <div class="mb-6 md:mb-10">
-                    <p id="final-mission-badge" class="text-white font-black text-xl md:text-3xl uppercase tracking-[0.3em] leading-none mb-2">
-                        Misión comercial
-                    </p>
-                    <p id="final-mission-year" class="text-white font-black text-2xl md:text-4xl uppercase tracking-[0.5em] leading-none">
-                        2026
-                    </p>
-                </div>
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+                <div class="flex flex-col md:flex-row gap-12 md:gap-24">
+                    <!-- Left Accent Line -->
+                    <div class="hidden md:block w-1.5 bg-lightblue"></div>
 
-                <div class="flex justify-center mb-10 md:mb-16 drop-shadow-xl text-center overflow-hidden">
-                    <img id="final-mission-title" src="titulos/separtem.png" alt="Sé parte de la Misión Comercial"
-                        class="w-full max-w-[700px] lg:max-w-[1000px] h-auto scroll-trigger">
-                </div>
+                    <div class="flex-1">
+                        <!-- Heading Group -->
+                        <div class="mb-10 scroll-trigger">
+                            <img id="novas-solo-title" src="titulos/novassolo.png?v=3" alt="No vas solo. Vas con Chile."
+                                class="section-title-img scroll-trigger mb-6 !ml-0">
+                            <p class="text-white text-xl md:text-3xl font-bold opacity-90">
+                                Una delegación oficial. Una experiencia estructurada.
+                            </p>
+                        </div>
 
-                <p id="final-mission-date" class="text-white font-black text-sm md:text-xl uppercase tracking-[0.2em] md:tracking-[0.4em] mb-12 md:mb-20 opacity-90">
-                    Cierre de inscripciones: 30 de abril
-                </p>
+                        <!-- Para quien Card -->
+                        <div
+                            class="bg-white/5 border-l-4 border-lightblue p-8 md:p-10 mb-10 scroll-trigger se-parte-content">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-3 h-3 bg-white rounded-full"></span>
+                                <h3 class="text-white font-black uppercase tracking-widest text-lg">Para quién</h3>
+                            </div>
+                            <p class="text-white/80 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
+                                Para empresas tecnológicas chilenas de múltiples sectores que aún no tienen presencia en
+                                el Reino Unido. Un delegado por empresa. Máximo 18 cupos.
+                            </p>
+                        </div>
 
-                <a id="final-cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
-                    target="_blank"
-                    class="mx-auto bg-white text-primary px-10 py-6 md:px-20 md:py-10 sharp-btn hover:bg-lightblue hover:text-white hover:-translate-y-2 hover:translate-x-2 transition-all group overflow-visible">
-                    <div class="flex items-center justify-center gap-6 md:gap-10">
-                        <span
-                            class="text-xl md:text-4xl font-[900] uppercase tracking-tighter leading-tight text-center">
-                            Inscríbete
-                        </span>
-                        <span
-                            class="material-symbols-outlined text-4xl md:text-6xl font-black transition-transform group-hover:translate-x-2">arrow_forward</span>
+                        <!-- Partner Context -->
+                        <p
+                            class="text-white text-xl md:text-2xl font-bold mb-8 max-w-4xl scroll-trigger se-parte-content">
+                            BritCham Chile es tu partner estratégico: gestionamos tu agenda, te conectamos con el
+                            ecosistema tecnológico del Reino Unido y te abrimos puertas que tardarías años en abrir
+                            solo.
+                        </p>
+
+                        <!-- Benefits Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                            <div
+                                class="flex items-center gap-4 bg-white/5 p-6 border border-white/10 scroll-trigger se-parte-content">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl font-black">check_circle</span>
+                                <span class="text-white font-bold text-lg">Gestión y coordinación de agenda</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 bg-white/5 p-6 border border-white/10 scroll-trigger se-parte-content">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl font-black">check_circle</span>
+                                <span class="text-white font-bold text-lg">Acreditación VIP oficial en el evento</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 bg-white/5 p-6 border border-white/10 scroll-trigger se-parte-content">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl font-black">check_circle</span>
+                                <span class="text-white font-bold text-lg">Apoyo logístico e institucional</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 bg-white/5 p-6 border border-white/10 scroll-trigger se-parte-content">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl font-black">check_circle</span>
+                                <span class="text-white font-bold text-lg">Materiales oficiales de la delegación</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="scroll-trigger">
+                            <a id="final-cta-btn"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSc7KW9D8MTyQaV5FwnafNWFNsGaVHx-OVkdN8AxJX56MfZqMg/viewform"
+                                target="_blank"
+                                class="inline-block bg-white text-primary px-10 py-6 md:px-16 md:py-8 sharp-btn hover:bg-lightblue hover:text-white transition-all group overflow-visible">
+                                <div class="flex items-center justify-center gap-6 md:gap-10">
+                                    <span
+                                        class="text-xl md:text-3xl font-[900] uppercase tracking-tighter leading-tight">
+                                        Inscríbete
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined text-3xl md:text-5xl font-black transition-transform group-hover:translate-x-2">arrow_forward</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
         <footer class="bg-white border-t-4 md:border-t-8 border-primary py-10 md:py-14">
@@ -999,246 +1250,441 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-        // Hero Banner Evaporation Animation
-        const heroTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: 'section.relative.min-h-screen',
-                start: 'top top',
-                end: 'bottom 20%',
-                scrub: true
-            }
-        });
-
-        heroTimeline
-            .to('#hero-logo', { opacity: 0, y: -100, duration: 1 }, 0)
-            .to('#hero-mision', { opacity: 0, scale: 0.8, y: -50, duration: 0.8 }, 0.1)
-            .to('#hero-title', { opacity: 0, y: -150, duration: 1.2 }, 0)
-            .to('#hero-year-container', { opacity: 0, y: -80, duration: 1 }, 0.2)
-            .to('#hero-desc-container', { opacity: 0, y: -60, duration: 1 }, 0.3)
-            .to('#hero-btn', { opacity: 0, scale: 0.7, y: -40, duration: 0.8 }, 0.4);
-                        // Final Section - Subtle Background Parallax
-        gsap.to('#final-parallax-bg', {
-            x: window.innerWidth < 768 ? -30 : -60,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#sumate',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: true,
-                markers: false
-            }
-        });
-
-        // Final Section - Entrance Animations
-        const finalEntranceTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#sumate',
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-
-                finalEntranceTimeline
-            .fromTo('#final-mission-badge', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
-            .fromTo('#final-mission-year', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-            .fromTo('#final-mission-title', 
-                { opacity: 0, y: -40 }, 
-                { opacity: 1, y: 0, duration: 0.9, delay: 0.3, ease: 'power3.out' }, 
-                0
-            )
-            .fromTo('#final-mission-date', 
-                { opacity: 0 }, 
-                { opacity: 1, duration: 0.6, delay: 0.6 }, 
-                0
-            )
-            .fromTo('#final-cta-btn', 
-                { opacity: 0, scale: 0.7 }, 
-                { opacity: 1, scale: 1, duration: 0.7, delay: 0.8, ease: 'back.out(1.7)' }, 
-                0
-            );
-                // Titles Entrance Animations
-        gsap.fromTo('#quienes-somos-title', 
-            { opacity: 0, y: 40 },
-            { 
-                opacity: 1, 
-                y: 0, 
-                duration: 0.8, 
-                ease: 'power3.out',
+            // Hero Banner Evaporation Animation
+            const heroTimeline = gsap.timeline({
                 scrollTrigger: {
-                    trigger: '#quienessomos', 
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            }
-        );
-
-                // FAQ Section Animation
-        const faqTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#faq',
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-
-        // Title Animation
-        faqTimeline.fromTo('#faq-title', 
-            { autoAlpha: 0, y: 30 },
-            { 
-                autoAlpha: 1, 
-                y: 0, 
-                duration: window.innerWidth < 768 ? 0.5 : 0.8, 
-                ease: 'power3.out' 
-            }
-        );
-
-        // Questions Animation (Cascaded)
-        faqTimeline.fromTo('.faq-item', 
-            { autoAlpha: 0, x: -30 },
-            { 
-                autoAlpha: 1, 
-                x: 0, 
-                duration: window.innerWidth < 768 ? 0.4 : 0.6, 
-                stagger: 0.1, 
-                ease: 'power2.out' 
-            },
-            '+=0.2' // Starts 0.2s after title starts
-        );
-
-        // Inversión Section Animation
-        const inversionTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#inversion',
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-
-        // Title Animation
-        inversionTimeline.fromTo('#inversion-title', 
-            { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
-        );
-
-        // Cards Animation
-        gsap.utils.toArray('.inversion-card').forEach((card, index) => {
-            const cardTimeline = gsap.timeline({
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
+                    trigger: 'section.relative.min-h-screen',
+                    start: 'top top',
+                    end: 'bottom 20%',
+                    scrub: true
                 }
             });
 
-            // Entrance + Border Color Change
-            cardTimeline.fromTo(card,
-                { opacity: 0, y: 50, scale: 0.95 },
-                { 
-                    opacity: 1, 
-                    y: 0, 
-                    scale: 1, 
-                    duration: 0.7, 
-                    delay: index * 0.15,
-                    ease: 'back.out(1.7)',
-                    borderLeftColor: '#00A4EF' 
-                }
-            );
-
-            // Icon Animation (Material Symbol)
-            const icon = card.querySelector('.material-symbols-outlined');
-            if (icon) {
-                cardTimeline.fromTo(icon,
-                    { opacity: 0, scale: 0 },
-                    { opacity: 1, scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' },
-                    '-=0.4'
-                );
-            }
-
-            // Text Animations (h3, p, ul)
-            const contentElements = card.querySelectorAll('h3, p, ul');
-            cardTimeline.fromTo(contentElements,
-                { opacity: 0 },
-                { opacity: 1, duration: 0.6, stagger: 0.1 },
-                '-=0.3'
-            );
-        });
-        // Why UK Section Animation
-        const whyUkTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#por-que-uk',
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-
-        // Title Animation
-        whyUkTimeline.fromTo('#why-uk-title', 
-            { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
-        );
-
-        // Cards Animation
-        gsap.utils.toArray('.why-uk-card').forEach((card, index) => {
-            const cardTimeline = gsap.timeline({
+            heroTimeline
+                .to('#hero-logo', { opacity: 0, y: -100, duration: 1 }, 0)
+                .to('#hero-mision', { opacity: 0, scale: 0.8, y: -50, duration: 0.8 }, 0.1)
+                .to('#hero-title', { opacity: 0, y: -150, duration: 1.2 }, 0)
+                .to('#hero-year-container', { opacity: 0, y: -80, duration: 1 }, 0.2)
+                .to('#hero-desc-container', { opacity: 0, y: -60, duration: 1 }, 0.3)
+                .to('#hero-cta-btn', { opacity: 0, scale: 0.7, y: -40, duration: 0.8 }, 0.4);
+            // Final Section - Subtle Background Parallax
+            // Parallax Effects
+            gsap.to('#sumate-parallax-bg', {
+                y: 50,
+                ease: 'none',
                 scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
+                    trigger: '#sumate',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true
                 }
             });
 
-            // Entrance + Border Color Change
-            cardTimeline.fromTo(card,
-                { opacity: 0, y: 50, scale: 0.95 },
-                { 
-                    opacity: 1, 
-                    y: 0, 
-                    scale: 1, 
-                    duration: 0.7, 
-                    delay: index * 0.15,
-                    ease: 'back.out(1.7)',
-                    borderLeftColor: '#00A4EF' 
+            gsap.to('#final-parallax-bg', {
+                x: window.innerWidth < 768 ? -75 : -160,
+                y: 160,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#se-parte',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true,
+                    markers: false
                 }
-            );
+            });
 
-            // Icon Animation (SVG)
-            const icon = card.querySelector('svg');
-            if (icon) {
-                cardTimeline.fromTo(icon,
-                    { opacity: 0, scale: 0 },
-                    { opacity: 1, scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' },
+            // Súmate Section - Entrance Animations
+            const sumateTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#sumate',
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            sumateTimeline
+                .fromTo('#final-mission-title',
+                    { opacity: 0, y: -40 },
+                    { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }
+                )
+                .fromTo('.stat-block',
+                    { opacity: 0, x: -20 },
+                    { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: 'power2.out' },
                     '-=0.4'
+                )
+                .fromTo('#sumate .lg\\:sticky',
+                    { opacity: 0, scale: 0.9, y: 30 },
+                    { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: 'power2.out' },
+                    '-=0.6'
                 );
-            }
 
-            // Text Animations
-            const texts = card.querySelectorAll('h3, p');
-            cardTimeline.fromTo(texts,
-                { opacity: 0 },
-                { opacity: 1, duration: 0.6, stagger: 0.1 },
-                '-=0.3'
-            );
-        });
-            gsap.utils.toArray('.agenda-card').forEach((card) => {
-                gsap.fromTo(card,
+            // Final Section CTA Animation and Content Entrance
+            const seParteTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#se-parte',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            seParteTimeline
+                .fromTo('.se-parte-content',
+                    { opacity: 0, y: 30 },
                     {
-                        opacity: 0,
-                        x: 100
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        stagger: 0.15,
+                        ease: 'power2.out'
+                    }
+                )
+                .fromTo('#final-cta-btn',
+                    { opacity: 0, scale: 0.7 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.7,
+                        ease: 'back.out(1.7)'
                     },
+                    '-=0.4'
+                );
+
+            // Titles Entrance Animations
+            gsap.fromTo(['#quienes-somos-title', '#agenda-title', '#novas-solo-title'],
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: '#quienessomos, #agenda, #se-parte',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+
+            // Institutional Network Animation
+            gsap.fromTo('.network-logos img',
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: 'back.out(1.7)',
+                    scrollTrigger: {
+                        trigger: '#institutional-network',
+                        start: 'top 90%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+
+            // FAQ Section Animation
+            const faqTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#faq',
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            // Title Animation
+            faqTimeline.fromTo('#faq-title',
+                { autoAlpha: 0, y: 30 },
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: window.innerWidth < 768 ? 0.5 : 0.8,
+                    ease: 'power3.out'
+                }
+            );
+
+            // Questions Animation (Cascaded)
+            faqTimeline.fromTo('.faq-item',
+                { autoAlpha: 0, x: -30 },
+                {
+                    autoAlpha: 1,
+                    x: 0,
+                    duration: window.innerWidth < 768 ? 0.4 : 0.6,
+                    stagger: 0.1,
+                    ease: 'power2.out'
+                },
+                '+=0.2' // Starts 0.2s after title starts
+            );
+
+            // Inversión Section Animation
+            const inversionTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#inversion',
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            // Title Animation
+            inversionTimeline.fromTo('#inversion-title',
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+            );
+
+            // Cards Animation
+            gsap.utils.toArray('.inversion-card').forEach((card, index) => {
+                const cardTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                // Entrance + Border Color Change
+                cardTimeline.fromTo(card,
+                    { opacity: 0, y: 50, scale: 0.95 },
                     {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.7,
+                        delay: index * 0.15,
+                        ease: 'back.out(1.7)',
+                        borderLeftColor: '#00A4EF'
+                    }
+                );
+
+                // Icon Animation (Material Symbol)
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    cardTimeline.fromTo(icon,
+                        { opacity: 0, scale: 0 },
+                        { opacity: 1, scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' },
+                        '-=0.4'
+                    );
+                }
+
+                // Text Animations (h3, p, ul)
+                const contentElements = card.querySelectorAll('h3, p, ul');
+                cardTimeline.fromTo(contentElements,
+                    { opacity: 0 },
+                    { opacity: 1, duration: 0.6, stagger: 0.1 },
+                    '-=0.3'
+                );
+            });
+
+            // Why UK Section Animation
+            const whyUkTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#por-que-ltw',
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            whyUkTimeline.fromTo('#why-uk-title',
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+            );
+
+            // Cards Animation
+            gsap.utils.toArray('.why-uk-card').forEach((card, index) => {
+                const cardTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                // Entrance + Border Color Change
+                cardTimeline.fromTo(card,
+                    { opacity: 0, y: 50, scale: 0.95 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.7,
+                        delay: index * 0.15,
+                        ease: 'back.out(1.7)',
+                        borderLeftColor: '#00A4EF'
+                    }
+                );
+
+                // Icon Animation (SVG)
+                const icon = card.querySelector('svg');
+                if (icon) {
+                    cardTimeline.fromTo(icon,
+                        { opacity: 0, scale: 0 },
+                        { opacity: 1, scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' },
+                        '-=0.4'
+                    );
+                }
+
+                // Text Animations
+                const texts = card.querySelectorAll('h3, p');
+                cardTimeline.fromTo(texts,
+                    { opacity: 0 },
+                    { opacity: 1, duration: 0.6, stagger: 0.1 },
+                    '-=0.3'
+                );
+            });
+
+            // Agenda Section Sequence Animation
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 1024px)", () => {
+                // Desktop: Staggered sequence
+                const agendaTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#agenda',
+                        start: 'top 75%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                agendaTimeline
+                    .fromTo('#agenda-title',
+                        { opacity: 0, y: 30 },
+                        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+                    )
+                    .fromTo('#countdown',
+                        { opacity: 0 },
+                        { opacity: 1, duration: 0.6 },
+                        '-=0.4'
+                    )
+                    .fromTo('#agenda-legend',
+                        { opacity: 0 },
+                        { opacity: 1, duration: 0.6 },
+                        '-=0.3'
+                    )
+                    .fromTo('.agenda-card',
+                        { opacity: 0, x: 50 },
+                        {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.7,
+                            stagger: 0.2,
+                            ease: 'power2.out'
+                        },
+                        '-=0.2'
+                    );
+
+                // Why LTW Section Animation (Desktop)
+                const whyTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#por-que-ltw',
+                        start: 'top 75%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                whyTimeline
+                    .fromTo('#why-uk-title', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8 })
+                    .fromTo('#why-ltw-subtitle', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.4')
+                    .fromTo('.why-card', { opacity: 0, scale: 0.9, y: 30 }, {
+                        opacity: 1,
+                        scale: 1,
+                        y: 0,
+                        duration: 0.6,
+                        stagger: 0.2,
+                        ease: 'back.out(1.2)'
+                    }, '-=0.2');
+            });
+
+            mm.add("(max-width: 1023px)", () => {
+                // Mobile/Tablet: Individual triggers for cards
+                const introTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#agenda',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                introTimeline
+                    .fromTo('#agenda-title', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 })
+                    .fromTo('#countdown', { opacity: 0 }, { opacity: 1, duration: 0.5 }, '-=0.3')
+                    .fromTo('#agenda-legend', { opacity: 0 }, { opacity: 1, duration: 0.5 }, '-=0.3');
+
+                gsap.utils.toArray('.agenda-card').forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.8,
+                            scrollTrigger: {
+                                trigger: card,
+                                start: 'top 90%',
+                                toggleActions: 'play none none none'
+                            }
+                        }
+                    );
+                });
+
+                // Why LTW Section Animation (Mobile/Tablet)
+                const whyIntroTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#por-que-ltw',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                whyIntroTimeline
+                    .fromTo('#why-uk-title', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 })
+                    .fromTo('#why-ltw-subtitle', { opacity: 0 }, { opacity: 1, duration: 0.5 }, '-=0.3');
+
+                gsap.utils.toArray('.why-card').forEach((card) => {
+                    gsap.fromTo(card, { opacity: 0, x: -30 }, {
                         opacity: 1,
                         x: 0,
                         duration: 0.8,
-                        ease: "power3.out",
                         scrollTrigger: {
                             trigger: card,
-                            start: "top 85%",
-                            toggleActions: "play none none none"
+                            start: 'top 90%',
+                            toggleActions: 'play none none none'
                         }
-                    }
-                );
+                    });
+                });
             });
+
         });
+    </script>
+
+    <script>
+        // Separate script block for the timer to ensure it runs even if other scripts fail
+        (function () {
+            const targetDate = new Date(2026, 5, 8, 9, 0, 0).getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                const daysEl = document.getElementById('days');
+                const hoursEl = document.getElementById('hours');
+                const minutesEl = document.getElementById('minutes');
+                const countdownEl = document.getElementById('countdown');
+
+                if (distance < 0) {
+                    if (countdownEl) countdownEl.innerHTML = "<span class='text-primary font-black uppercase tracking-widest text-sm'>¡EL EVENTO HA COMENZADO!</span>";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+                if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
     </script>
 </body>
 

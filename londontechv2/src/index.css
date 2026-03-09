@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+@theme {
+    --color-navy: #0A0F2C;
+    --color-blue: #1E6FFF;
+    --color-red: #C8102E;
+    --color-ice: #E0E7FF;
+    --font-outfit: "Outfit", sans-serif;
+    --font-clash: "Plus Jakarta Sans", sans-serif;
+    --font-display: "Space Grotesk", sans-serif;
+}
+
+:root {
+    --navy: #0A0F2C;
+    --blue: #1E6FFF;
+    --red: #C8102E;
+    --white: #FFFFFF;
+    --ice: #E0E7FF;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--navy);
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.clash {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.display {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Premium Effects */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+}
+
+.grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.grid-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(30, 111, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 111, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Animations */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.shimmer-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2.5s infinite;
+}
+
+/* Hero Animations */
+@keyframes ken-burns {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.2) translateY(-2%);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-ken-burns {
+    animation: ken-burns 40s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+.animate-ticker {
+    animation: ticker 40s linear infinite;
+}
+
+.animate-fade-up {
+    animation: fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Custom Utilities */
+.text-glow {
+    text-shadow: 0 0 20px rgba(30, 111, 255, 0.3);
+}
+
+.border-glow:hover {
+    border-color: var(--blue);
+    box-shadow: 0 0 30px rgba(30, 111, 255, 0.15);
+}
