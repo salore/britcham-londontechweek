@@ -285,7 +285,7 @@
                     </p>
                     <div class="flex items-center gap-6 scroll-trigger">
                         <span
-                            class="text-lg md:text-xl font-black uppercase tracking-widest text-primary/40">Organizadores
+                            class="text-lg md:text-xl font-black uppercase tracking-widest text-primary/40 scroll-trigger">Organizadores
                             Delegación Oficial 2026</span>
                     </div>
                 </div>
@@ -297,7 +297,7 @@
                             institucional</h3>
                         <img id="respaldados-title" src="titulos/respaldados.png?v=5"
                             alt="Respaldados por quienes abren puertas" class="section-title-img scroll-trigger mb-4">
-                        <p class="text-primary/60 text-xl font-bold max-w-2xl mx-auto">
+                        <p class="text-primary/60 text-xl font-bold max-w-2xl mx-auto scroll-trigger">
                             Una red de alianzas estratégicas que garantiza el éxito de tu misión comercial
                             en el Reino Unido.
                         </p>
@@ -845,25 +845,25 @@
                             Cada delegado debe
                             cubrir</h3>
                         <ul class="space-y-3 md:space-y-4 text-primary text-sm md:text-base font-bold leading-relaxed">
-                            <li class="flex items-center gap-2 md:gap-3">
+                            <li class="flex items-center gap-2 md:gap-3 scroll-trigger">
                                 <span class="material-symbols-outlined text-lightblue text-xl md:text-2xl">flight</span>
                                 Pasajes aéreos
                             </li>
-                            <li class="flex items-center gap-2 md:gap-3">
+                            <li class="flex items-center gap-2 md:gap-3 scroll-trigger">
                                 <span class="material-symbols-outlined text-lightblue text-xl md:text-2xl">home</span>
                                 Alojamiento y viáticos
                             </li>
-                            <li class="flex items-center gap-2 md:gap-3">
+                            <li class="flex items-center gap-2 md:gap-3 scroll-trigger">
                                 <span
                                     class="material-symbols-outlined text-lightblue text-xl md:text-2xl">restaurant</span>
                                 Comidas
                             </li>
-                            <li class="flex items-center gap-2 md:gap-3">
+                            <li class="flex items-center gap-2 md:gap-3 scroll-trigger">
                                 <span
                                     class="material-symbols-outlined text-lightblue text-xl md:text-2xl">directions_subway</span>
                                 Transporte
                             </li>
-                            <li class="flex items-center gap-2 md:gap-3">
+                            <li class="flex items-center gap-2 md:gap-3 scroll-trigger">
                                 <span
                                     class="material-symbols-outlined text-lightblue text-xl md:text-2xl">receipt_long</span>
                                 Costo ETA - Visa
@@ -1298,6 +1298,31 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Global reveal for everything with .scroll-trigger class
+            gsap.utils.toArray('.scroll-trigger').forEach((el) => {
+                // If it's already animated by a specific timeline (handchecked), we skip it
+                const id = el.id;
+                const classList = el.classList;
+                if (id === 'hero-logo' || id === 'hero-title' || classList.contains('why-card') || classList.contains('agenda-card')) {
+                    return;
+                }
+
+                gsap.fromTo(el,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 92%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+
             // Hero Banner Evaporation Animation
             const heroTimeline = gsap.timeline({
                 scrollTrigger: {
