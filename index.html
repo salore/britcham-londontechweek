@@ -1414,6 +1414,27 @@
                 }
             );
 
+            // Quienes Somos - Scroll Reveal
+            const qsTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#quienessomos',
+                    start: 'top 70%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            // Animating main paragraph and subsequent text blocks in Quienes Somos
+            qsTimeline.fromTo('#quienessomos p, #quienessomos h3, #respaldados-title, #quienessomos span',
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: 'power2.out'
+                }
+            );
+
             // Institutional Network Animation
             gsap.fromTo('.network-logos img',
                 { opacity: 0, scale: 0.8 },
